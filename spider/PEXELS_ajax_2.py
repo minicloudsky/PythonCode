@@ -1,4 +1,4 @@
-﻿#coding:utf-8
+﻿# coding: utf-8
 import re
 import requests
 import os
@@ -53,7 +53,7 @@ class pexels():
     def downloadPic(self,url,count):
         print("downloading :"+url)
         try:
-            req = requests.get(url,headers = self.header,timeout=100)
+            req = requests.get(url,headers = self.header)
             f = open(self.path+"\\"+str(count)+ ".jpg", 'wb')
             f.write(req.content)
             f.close()
