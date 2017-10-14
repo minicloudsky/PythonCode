@@ -27,6 +27,7 @@ class DoubanMovie:
         self.movie_time = 0
         self.better_than =""
         self.response = requests.get(self.movie_index,headers = header,timeout=50)
+        print(self.response.status_code)
         self.content = self.response.content.decode('utf-8')
         self.get_movie_name()
         self.get_movie_degree()
@@ -38,7 +39,7 @@ class DoubanMovie:
         self.get_movie_time()
         self.get_director()
         # self.get_movie_nation()
-        self.get_evaluate_person()
+        # self.get_evaluate_person()
         self.comments()
     #获取短评论人数
     def get_short_comment_person_num(self):
@@ -153,7 +154,7 @@ class DoubanMovie:
         count =1
         for page in page_url:
             self.get_page_comments(page)
-            print("正在获取第 %s 页的评论" %count)
+            print("正在获取第 %s 页的评论" %(int(count/20)))
             count = count+20
         print("获取评论成功，正在写入文件")
         print(self.all_comments)
@@ -188,9 +189,6 @@ class DoubanMovie:
         f = codecs.open(self.path + "douban_comments.txt", 'r+', 'utf-8')
         f.write("")
         f.close()
-        comment = ""
-        for i in self.all_comments:
-            comment = comment+i
         try:
             f = codecs.open(self.path+"douban_comments.txt",'a+','utf-8')
             for li in self.all_comments:
@@ -202,9 +200,10 @@ class DoubanMovie:
             print("写入评论失败")
             raise IOError
 
+
 if __name__ == '__main__':
-    movie_id = "26425068"
-    movie_page = 20000
+    movie_id = "1292213"
+    movie_page = 101000
     comments_path = "D:\\"
     douban = DoubanMovie(movie_id,movie_page,comments_path)
     #'//*[@id="interest_sectl"]/div[1]/div[2]/strong/text()'

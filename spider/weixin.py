@@ -1,9 +1,20 @@
 # coding: utf-8
 import itchat
+import re
+import jieba
 from pandas import DataFrame
 itchat.login()
 friend = itchat.get_friends(update=True)[0:]
-print(friend)
+chatroom = itchat.get_chatrooms()
+print(chatroom)
+# print(friend)
+signatures = []
+for i in friend:
+    signature = i["Signature"].strip().replace("span","").replace("class","").replace("emoji","")
+    rep = re.compile("1f\d.+")
+    signature = rep.sub("",signature)
+    signatures.append(signature)
+itchat.send_msg('Hello ,filehepler',toUserName='filehelper')
 male = female = other = 0
 for i in friend[1:]:
     sex = i["Sex"]
