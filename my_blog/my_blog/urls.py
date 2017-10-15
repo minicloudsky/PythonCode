@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-
 urlpatterns = [
+    # Examples:
+    # url(r'^$', 'my_blog.views.home', name='home'),
+    # url(r'^blog/', include('blog.urls')),
     url(r'^admin/', admin.site.urls),
+    url(r'^$', 'article.views.home'),  #由于目前只有一个app, 方便起见, 就不设置include了
 ]
+
