@@ -1,13 +1,14 @@
 #!coding:utf-8
+# python2.7
 import os
 from selenium import webdriver
 import requests,time,json
 import requests
 header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
 img_list = []
-login_uin = '736000599' #登录qq
-pwd = 'hyg19900214.' #登录密码
-album_uin = '517290975' #要读取相册的qq
+login_uin = '' #登录qq
+pwd = '.' #登录密码
+album_uin = '' #要读取相册的qq
 s = requests.Session()
 #实例化出浏览器开始登录
 driver = webdriver.Chrome()
@@ -46,8 +47,8 @@ data = json.loads(r.text.encode('utf-8'))
 for album in data['data']['vFeeds']:
     alnum_name = '相册名:'+album['pic']['albumname'].encode('utf-8')
     alnum_id = '相册id:'+album['pic']['albumid'].encode('utf-8')
-    print alnum_name
-    print alnum_id
+    print (alnum_name)
+    print (alnum_id)
     print ('图片数量:' + str(album['pic']['albumnum']))
     # print ('开始下载相册图片:')
     #读取当前相册中的图片列表
@@ -60,9 +61,9 @@ for album in data['data']['vFeeds']:
             img_list.append(pic['1']['url'].encode('utf-8'))
 ua = {'User-Agent':'Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36'}
 path = "D:\\image"
-print "total :"
-print len(img_list)
-print img_list
+print ("total :")
+print (len(img_list))
+print (img_list)
 count = 1
 for i in img_list:
     try:
