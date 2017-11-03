@@ -144,9 +144,9 @@ if __name__ == '__main__':
     # 要爬取的问题
     question_id = '43551423'
     # 你的用户名
-    username = '15716302402'
+    username = ''
     # 你的知乎密码
-    password = 'jyw831392'
+    password = ''
     # 存储路径
     path = "D:\\zhihu"
     page_num = 481
