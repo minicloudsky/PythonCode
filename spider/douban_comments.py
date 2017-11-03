@@ -186,11 +186,11 @@ class DoubanMovie:
             for con in content:
                 self.all_comments.append(con)
     def write_comments(self):
-        f = codecs.open(self.path + "douban_comments.txt", 'r+', 'utf-8')
+        f = codecs.open(self.path + "douban_comments.txt", 'wb', 'utf-8')
         f.write("")
         f.close()
         try:
-            f = codecs.open(self.path+"douban_comments.txt",'a+','utf-8')
+            f = codecs.open(self.path+"douban_comments.txt",'wb','utf-8')
             for li in self.all_comments:
                 f.write(li)
                 f.flush()
@@ -202,8 +202,8 @@ class DoubanMovie:
 
 
 if __name__ == '__main__':
-    movie_id = "1292213"
-    movie_page = 101000
+    movie_id = "25779218"
+    movie_page = 100000
     comments_path = "D:\\"
     douban = DoubanMovie(movie_id,movie_page,comments_path)
     #'//*[@id="interest_sectl"]/div[1]/div[2]/strong/text()'
