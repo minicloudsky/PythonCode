@@ -77,18 +77,13 @@
       <file leaf-file-name="获取知乎问题下所有回答.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/获取知乎问题下所有回答.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-150">
-              <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+            <state relative-caret-position="515">
+              <caret line="160" column="22" lean-forward="true" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
               <folding>
-                <element signature="e#367#5702#0" expanded="false" />
+                <element signature="e#61#91#0" expanded="true" />
                 <element signature="e#439#1153#0" expanded="false" />
-                <element signature="e#1190#1911#0" expanded="false" />
-                <element signature="e#1946#2252#0" expanded="false" />
-                <element signature="e#2291#2461#0" expanded="false" />
-                <element signature="e#2499#2711#0" expanded="false" />
-                <element signature="e#2746#3869#0" expanded="false" />
-                <element signature="e#3906#4451#0" expanded="false" />
-                <element signature="e#5154#5702#0" expanded="false" />
+                <element signature="e#5309#5857#0" expanded="false" />
+                <marker date="1509758590434" expanded="false" signature="4026:4580" ph="..." />
               </folding>
             </state>
           </provider>
@@ -703,18 +698,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/获取知乎问题下所有回答.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-150">
-          <caret line="4" column="11" lean-forward="true" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="11" />
+        <state relative-caret-position="515">
+          <caret line="160" column="22" lean-forward="true" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
           <folding>
-            <element signature="e#367#5702#0" expanded="false" />
+            <element signature="e#61#91#0" expanded="true" />
             <element signature="e#439#1153#0" expanded="false" />
-            <element signature="e#1190#1911#0" expanded="false" />
-            <element signature="e#1946#2252#0" expanded="false" />
-            <element signature="e#2291#2461#0" expanded="false" />
-            <element signature="e#2499#2711#0" expanded="false" />
-            <element signature="e#2746#3869#0" expanded="false" />
-            <element signature="e#3906#4451#0" expanded="false" />
-            <element signature="e#5154#5702#0" expanded="false" />
+            <element signature="e#5309#5857#0" expanded="false" />
+            <marker date="1509758590434" expanded="false" signature="4026:4580" ph="..." />
           </folding>
         </state>
       </provider>

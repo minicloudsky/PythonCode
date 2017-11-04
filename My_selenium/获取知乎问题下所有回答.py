@@ -32,6 +32,7 @@ class zhihu_User():
         self.write_answer()
         self.download_image()
         self.download_avatar()
+    # 登录到知乎
     def login(self,driver):
         login_url = 'https://www.zhihu.com/#signin'
         # 点击使用密码登录
@@ -46,7 +47,7 @@ class zhihu_User():
         time.sleep(3)
         print(driver.current_url)
         print("登录知乎成功")
-
+    # 获取问题的标题
     def get_title(self):
         self.driver.get(self.question_url)
         title = self.driver.find_element_by_xpath('//*[@id="root"]/div/main/div/div[1]/div[2]/div[1]/div[1]/h1').text
@@ -54,18 +55,20 @@ class zhihu_User():
         print(title)
         if not os.path.exists(self.path+"\\"+self.title):
             os.mkdir(self.path+"\\"+self.title)
+    # 生成每个回答的xpath
     def generate_xpath(self):
         list = []
         for i in range(1,21):
             list.append('//*[@id="QuestionAnswers-answers"]/div/div/div[2]/div['+str(i)+']/div/div[2]/div[1]')
         return list
-
+    # 生成每一页回答对应的url
     def generate_url(self):
         list = []
         for i in range(1,self.page_num+1):
             list.append("https://www.zhihu.com/question/"+str(self.question_id)+'/answers/created?page='+str(i))
         print("生成每一页链接成功")
         return list
+    # 获取回答和图片，其中image是每个回答里的图片，avatar是每一页的用户头像
     def get_answer(self):
         page = 0
         answers = self.all_question_url
@@ -96,6 +99,7 @@ class zhihu_User():
         self.avatar = set(self.avatar)
         print("一共有 %s 张 图片" %(len(self.image_list)))
         print("一共有 %s 张头像" %(len(self.avatar)))
+    # 把所有回答写入txt文件
     def write_answer(self):
         if not os.path.exists(self.path+"\\"+self.title+"\\"):
             os.mkdir(self.path+"\\"+self.title+"\\")
@@ -112,6 +116,7 @@ class zhihu_User():
             print("答案写入文件成功")
         except IOError:
             print("写入文件失败")
+    # 下载回答里的图片
     def download_image(self):
         if not os.path.exists(self.path+"\\"+self.title+"\\"+"data-original"):
             os.mkdir(self.path+"\\"+self.title+"\\"+"data-original")
@@ -129,6 +134,7 @@ class zhihu_User():
                 count += 1
             except:
                 pass
+    # 下载头像
     def download_avatar(self):
         if not os.path.exists(self.path + "\\" + self.title + "\\" + "avatar"):
             os.mkdir(self.path + "\\" + self.title + "\\" + "avatar")
