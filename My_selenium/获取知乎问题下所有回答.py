@@ -1,4 +1,6 @@
 #coding: utf-8
+# written by 瞻彼淇奥
+# win10+pycharm +python3.54
 from selenium import webdriver
 import time
 import re
@@ -118,9 +120,10 @@ class zhihu_User():
             img = i[-4:]
             if img == 'jpeg':
                 img = ".jpeg"
-            r = requests.get(i,headers = header,timeout = 60)
-            print("正在下载第 %s 张图片" %(count))
+
             try:
+                r = requests.get(i, headers=header, timeout=60)
+                print("正在下载第 %s 张图片" % (count))
                 with codecs.open(self.path+"\\"+self.title+"\\"+"data-original"+"\\"+str(count)+img,'wb') as f:
                     f.write(r.content)
                 count += 1
@@ -141,15 +144,17 @@ class zhihu_User():
             except:
                 pass
 if __name__ == '__main__':
-    # 要爬取的问题
-    question_id = '43551423'
+    # 要爬取的问题id，看一下浏览器的url，比如该问题url是https://www.zhihu.com/question/30850162/answers/created，
+    # 就在下面输入30850162
+    question_id = '30850162'
     # 你的用户名
     username = ''
     # 你的知乎密码
     password = ''
     # 存储路径
     path = "D:\\zhihu"
-    page_num = 481
+    # 先点击知乎问题下面的按照时间排序，然后下拉页面到最后，有个1,2,3把总页数写到这里，其实，主要还是我selenium定位找不到这个数字。。。
+    page_num = 207
     zhihu = zhihu_User(page_num,question_id, username, password, path)
 
 
