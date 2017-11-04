@@ -145,7 +145,7 @@ class zhihu_User():
                 pass
 if __name__ == '__main__':
     # 要爬取的问题id，看一下浏览器的url，比如该问题url是https://www.zhihu.com/question/30850162/answers/created，
-    # 就在下面输入30850162
+    # 就在下面输入30850162，记得程序运行后要记得点击下程序打开的浏览器页面上知乎的验证码哦^_^
     question_id = '30850162'
     # 你的用户名
     username = ''
