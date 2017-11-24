@@ -17,7 +17,7 @@
     <SUITE FILE_PATH="coverage/My_selenium$get_page_answer.coverage" NAME="get_page_answer Coverage Results" MODIFIED="1508572064471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$pycon.coverage" NAME="pycon Coverage Results" MODIFIED="1508321590144" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$wangzherongyao_skin.coverage" NAME="wangzherongyao_skin Coverage Results" MODIFIED="1508410507715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/My_selenium$.coverage" NAME="获取知乎问题下所有回答 Coverage Results" MODIFIED="1509753338967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/My_selenium$.coverage" NAME="获取知乎问题下所有回答 Coverage Results" MODIFIED="1511502030340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$loginto_qq.coverage" NAME="loginto_qq Coverage Results" MODIFIED="1508334227196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$get_.coverage" NAME="get_王者荣耀皮肤 Coverage Results" MODIFIED="1508409301194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$zhihu_user.coverage" NAME="zhihu_user Coverage Results" MODIFIED="1508578035843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -34,41 +34,33 @@
     <SUITE FILE_PATH="coverage/My_selenium$login_zhihu.coverage" NAME="login_zhihu Coverage Results" MODIFIED="1508418227285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$zeran_zhihu_answer.coverage" NAME="zeran_zhihu_answer Coverage Results" MODIFIED="1508572583466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$QQ.coverage" NAME="QQ好友爬虫 Coverage Results" MODIFIED="1508387663469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/My_selenium$zhihu_userspider.coverage" NAME="zhihu_userspider Coverage Results" MODIFIED="1508642644494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/My_selenium$zhihu_userspider.coverage" NAME="zhihu_userspider Coverage Results" MODIFIED="1509850059427" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$button_group.coverage" NAME="button_group Coverage Results" MODIFIED="1508415565483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$douyu_selenium.coverage" NAME="douyu_selenium Coverage Results" MODIFIED="1508333666288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$zhihu_User_API.coverage" NAME="zhihu_User_API Coverage Results" MODIFIED="1509446131227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$Start.coverage" NAME="Start Coverage Results" MODIFIED="1508325028398" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/My_selenium$zhihu_User_API_withURL.coverage" NAME="zhihu_User_API_withURL Coverage Results" MODIFIED="1509797963403" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$qq_video.coverage" NAME="qq_video Coverage Results" MODIFIED="1508397846868" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$operate_element.coverage" NAME="operate_element Coverage Results" MODIFIED="1508415360348" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="douyu_selenium.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/douyu_selenium.py">
+      <file leaf-file-name="zhihu_userspider.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/zhihu_userspider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zhihu_User_API.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/zhihu_User_API.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1500">
-              <caret line="140" column="81" lean-forward="false" selection-start-line="140" selection-start-column="81" selection-end-line="140" selection-end-column="81" />
+            <state relative-caret-position="300">
+              <caret line="227" column="28" lean-forward="false" selection-start-line="227" selection-start-column="28" selection-end-line="227" selection-end-column="28" />
               <folding>
-                <element signature="n#!!doc" expanded="false" />
-                <element signature="e#280#1188#0" expanded="false" />
-                <element signature="e#1225#1981#0" expanded="false" />
-                <element signature="e#2035#2689#0" expanded="false" />
-                <element signature="e#2753#2964#0" expanded="false" />
-                <element signature="e#3021#3670#0" expanded="false" />
-                <element signature="e#3258#3576#0" expanded="false" />
-                <element signature="e#6106#9025#0" expanded="false" />
-                <element signature="e#9074#9761#0" expanded="false" />
+                <element signature="e#221#9556#0" expanded="false" />
+                <element signature="e#280#1190#0" expanded="false" />
+                <element signature="e#1227#1985#0" expanded="false" />
+                <element signature="e#2039#2510#0" expanded="false" />
+                <element signature="e#2574#2785#0" expanded="false" />
+                <element signature="e#2842#3491#0" expanded="false" />
+                <element signature="e#3546#5316#0" expanded="false" />
+                <element signature="e#5362#5872#0" expanded="false" />
+                <element signature="e#5918#8837#0" expanded="false" />
+                <element signature="e#8886#9556#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -77,13 +69,10 @@
       <file leaf-file-name="获取知乎问题下所有回答.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/获取知乎问题下所有回答.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="160" column="22" lean-forward="true" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
+            <state relative-caret-position="270">
+              <caret line="158" column="16" lean-forward="false" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
               <folding>
-                <element signature="e#61#91#0" expanded="true" />
-                <element signature="e#439#1153#0" expanded="false" />
-                <element signature="e#5309#5857#0" expanded="false" />
-                <marker date="1509758590434" expanded="false" signature="4026:4580" ph="..." />
+                <element signature="e#5889#5976#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -104,6 +93,8 @@
       <find>赞同</find>
       <find>requests</find>
       <find>question_url</find>
+      <find>get_total_num</find>
+      <find>写入信息失败</find>
     </findStrings>
   </component>
   <component name="IdeDocumentHistory">
@@ -135,9 +126,10 @@
         <option value="$PROJECT_DIR$/zeran_zhihu_answer.py" />
         <option value="$PROJECT_DIR$/get_page_answer.py" />
         <option value="$PROJECT_DIR$/zhihu_user.py" />
-        <option value="$PROJECT_DIR$/zhihu_userspider.py" />
         <option value="D:/a.py" />
         <option value="$PROJECT_DIR$/zhihu_User_API.py" />
+        <option value="$PROJECT_DIR$/zhihu_User_API_withURL.py" />
+        <option value="$PROJECT_DIR$/zhihu_userspider.py" />
         <option value="$PROJECT_DIR$/获取知乎问题下所有回答.py" />
       </list>
     </option>
@@ -149,10 +141,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="753" />
-    <option name="y" value="59" />
-    <option name="width" value="825" />
-    <option name="height" value="867" />
+    <option name="x" value="31" />
+    <option name="y" value="161" />
+    <option name="width" value="1378" />
+    <option name="height" value="735" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -243,7 +235,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="zhihu_user" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="zhihu_User_API_withURL" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -256,7 +248,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="My_selenium" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zhihu_user.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/zhihu_User_API_withURL.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -280,19 +272,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.zhihu_user" />
-      <item index="1" class="java.lang.String" itemvalue="Python.zhihu_userspider" />
-      <item index="2" class="java.lang.String" itemvalue="Python.a" />
-      <item index="3" class="java.lang.String" itemvalue="Python.获取知乎问题下所有回答" />
-      <item index="4" class="java.lang.String" itemvalue="Python.zhihu_User_API" />
+      <item index="0" class="java.lang.String" itemvalue="Python.zhihu_userspider" />
+      <item index="1" class="java.lang.String" itemvalue="Python.a" />
+      <item index="2" class="java.lang.String" itemvalue="Python.获取知乎问题下所有回答" />
+      <item index="3" class="java.lang.String" itemvalue="Python.zhihu_User_API" />
+      <item index="4" class="java.lang.String" itemvalue="Python.zhihu_User_API_withURL" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.获取知乎问题下所有回答" />
-        <item index="1" class="java.lang.String" itemvalue="Python.zhihu_User_API" />
-        <item index="2" class="java.lang.String" itemvalue="Python.a" />
-        <item index="3" class="java.lang.String" itemvalue="Python.zhihu_userspider" />
-        <item index="4" class="java.lang.String" itemvalue="Python.zhihu_user" />
+        <item index="1" class="java.lang.String" itemvalue="Python.zhihu_userspider" />
+        <item index="2" class="java.lang.String" itemvalue="Python.zhihu_User_API_withURL" />
+        <item index="3" class="java.lang.String" itemvalue="Python.zhihu_User_API" />
+        <item index="4" class="java.lang.String" itemvalue="Python.a" />
       </list>
     </recent_temporary>
   </component>
@@ -322,13 +314,13 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5150721" sideWeight="0.506875" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40366971" sideWeight="0.493125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22018349" sideWeight="0.493125" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -338,6 +330,27 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5150721" sideWeight="0.506875" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.53866315" sideWeight="0.493125" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.249375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39937106" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -352,13 +365,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/forward_backward.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="17" column="13" lean-forward="true" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/get_page_answer.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1170">
@@ -604,13 +610,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../python35/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="364" column="0" lean-forward="false" selection-start-line="364" selection-start-column="0" selection-end-line="364" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/zeran_zhihu_answer.py" />
     <entry file="file://$PROJECT_DIR$/get_page_answer.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -663,48 +662,54 @@
       </provider>
     </entry>
     <entry file="file://D:/a.py" />
-    <entry file="file://$PROJECT_DIR$/zhihu_userspider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="17" column="32" lean-forward="false" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/douyu_selenium.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="14" column="21" lean-forward="false" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhihu_User_API.py" />
+    <entry file="file://$PROJECT_DIR$/../../../python35/Lib/site-packages/selenium/webdriver/remote/webdriver.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="956" column="0" lean-forward="false" selection-start-line="956" selection-start-column="0" selection-end-line="956" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhihu_User_API.py">
+    <entry file="file://$PROJECT_DIR$/zhihu_User_API_withURL.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1500">
-          <caret line="140" column="81" lean-forward="false" selection-start-line="140" selection-start-column="81" selection-end-line="140" selection-end-column="81" />
+        <state relative-caret-position="30">
+          <caret line="68" column="20" lean-forward="false" selection-start-line="68" selection-start-column="20" selection-end-line="68" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhihu_userspider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="227" column="28" lean-forward="false" selection-start-line="227" selection-start-column="28" selection-end-line="227" selection-end-column="28" />
           <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <element signature="e#280#1188#0" expanded="false" />
-            <element signature="e#1225#1981#0" expanded="false" />
-            <element signature="e#2035#2689#0" expanded="false" />
-            <element signature="e#2753#2964#0" expanded="false" />
-            <element signature="e#3021#3670#0" expanded="false" />
-            <element signature="e#3258#3576#0" expanded="false" />
-            <element signature="e#6106#9025#0" expanded="false" />
-            <element signature="e#9074#9761#0" expanded="false" />
+            <element signature="e#221#9556#0" expanded="false" />
+            <element signature="e#280#1190#0" expanded="false" />
+            <element signature="e#1227#1985#0" expanded="false" />
+            <element signature="e#2039#2510#0" expanded="false" />
+            <element signature="e#2574#2785#0" expanded="false" />
+            <element signature="e#2842#3491#0" expanded="false" />
+            <element signature="e#3546#5316#0" expanded="false" />
+            <element signature="e#5362#5872#0" expanded="false" />
+            <element signature="e#5918#8837#0" expanded="false" />
+            <element signature="e#8886#9556#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/获取知乎问题下所有回答.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="160" column="22" lean-forward="true" selection-start-line="160" selection-start-column="22" selection-end-line="160" selection-end-column="22" />
+        <state relative-caret-position="270">
+          <caret line="158" column="16" lean-forward="false" selection-start-line="158" selection-start-column="16" selection-end-line="158" selection-end-column="16" />
           <folding>
-            <element signature="e#61#91#0" expanded="true" />
-            <element signature="e#439#1153#0" expanded="false" />
-            <element signature="e#5309#5857#0" expanded="false" />
-            <marker date="1509758590434" expanded="false" signature="4026:4580" ph="..." />
+            <element signature="e#5889#5976#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -152,13 +152,13 @@ class zhihu_User():
 if __name__ == '__main__':
     # 要爬取的问题id，看一下浏览器的url，比如该问题url是https://www.zhihu.com/question/30850162/answers/created，
     # 就在下面输入30850162，记得程序运行后要记得点击下程序打开的浏览器页面上知乎的验证码哦^_^
-    question_id = '30850162'
+    question_id = '39851186'
     # 你的用户名
     username = ''
     # 你的知乎密码
     password = ''
     # 存储路径
-    path = "D:\\zhihu"
+    path = "D:\\"
     # 先点击知乎问题下面的按照时间排序，然后下拉页面到最后，有个1,2,3把总页数写到这里，其实，主要还是我selenium定位找不到这个数字。。。
     page_num = 207
     zhihu = zhihu_User(page_num,question_id, username, password, path)
