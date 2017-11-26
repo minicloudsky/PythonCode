@@ -13,3 +13,10 @@ def topics(request):
     #return render(request,'topics.html',context)
     return render_to_response('topics.html',locals())
     # return HttpResponse("mytopics")
+
+def topic(request,topic_id):
+    """显示单个主体及其所有的条目"""
+    topic = Topic.objects.get(id = topic_id)
+    entries = topic.entry_set.order_by('-date_added')
+    context = {'topics': topic,'entries': entries}
+    return render(request,'learning_logs/topic.html',context)
