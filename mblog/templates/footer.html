@@ -1,0 +1,22 @@
+<!-- footer.html -->
+<style>
+    .footer{
+        clear: both;/* 清除前后的浮动元素，使页脚显示在其下方 */
+        position: relative;
+        bottom:0;
+        height:30px;
+        background-color: aliceblue;
+    }
+</style>
+<div class="footer">
+<center>
+{% block footer %}
+
+    {% if now %}
+        <p style="font-family: 'PingFang SC';">现在时刻: {{ now }}</p>
+    {% else %}
+        <p style="font-family: 'Microsoft YaHei';">本文内容抓取自网络，如有侵权请来信通知下架</p>
+    {% endif %}
+{% endblock %}
+</center>
+</div>
