@@ -1,12 +1,32 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
+    <style type="text/css">
+        body{
+            background-color: skyblue;
+            padding: 0;
+            text-align: center;
+            background-repeat: round;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>关于作者</title>
 </head>
 <body>
-this is a test file
-<p>{{ author }}</p>
+<p>about me:</p><br>
+<p>我是瞻彼淇奥，欢迎你访问我的网站</p><br>
 <a href="/">返回首页</a>
+{% block content %}
+{% for about in abouts %}
+<p style="font-family: 'Apple LiGothic Medium';font-size: 14pt;font-weight: bold;">
+     {{ about.author }}<br>
+     {{ about.resume }}
+    <br>
+    现在时间: {{ about.update_date }}
+</p>
+{% endfor %}
+{%  endblock %}
+
 </body>
 </html>

@@ -17,7 +17,8 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from mainsite.views import homepage, showpost,showabout
-
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
     # '^'表示字符串开头，'$' 匹配字符串结尾,两个字符连接在一起是指当有用户浏览网址没有加上任何字符串时候(即根网址),就去调用
     # homepage函数,
@@ -27,5 +28,5 @@ urlpatterns = [
     url(r'^post/(\w+)$', showpost),
     url(r'^admin/', include(admin.site.urls)),
     # about page
-    url(r'^$',homepage)
-]
+    url(r'^about',showabout)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_DIR)

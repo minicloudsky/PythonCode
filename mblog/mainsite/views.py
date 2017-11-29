@@ -2,7 +2,7 @@
 from django.template.loader import get_template
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import Post
+from .models import Post,About
 from datetime import datetime
 # Create your views here.
 
@@ -28,10 +28,12 @@ def showpost(request,slug):
         # 发生例外找不到时候，重定向到首页
         return redirect('/')
 
+
 def showabout(request):
-    author = "I am 瞻彼淇奥"
     template = get_template('about.html')
     try:
+        now  = datetime.now()
+        abouts = About.objects.all()
         html = template.render(locals())
         return HttpResponse(html)
     except:
