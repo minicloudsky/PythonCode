@@ -1,4 +1,4 @@
-"""mynewsite URL Configuration
+"""chapter_5_urls URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -13,12 +13,11 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url ,include
 from django.contrib import admin
-from myapp.views import about,listing,disp_listing
+from myapp import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^about/',about),
-    url(r'^list/',listing),
-    url(r'^list/([0-9a-zA-Z]+)/$',disp_listing),
+    url(r'^$',views.index),
+    url(r'^$(\d{1})/$',views.index,name='tv_url'),
 ]
