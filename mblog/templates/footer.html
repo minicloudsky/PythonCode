@@ -14,14 +14,14 @@
 
 </style>
 <div class="footer">
-<center>
-{% block footer %}
+    <center>
+        {% block footer %}
 
-    {% if now %}
-        <center><p style="font-family: 'PingFang SC';">现在时刻: {{ now }}</p></center>
-    {% else %}
-        <center> <p style="font-family: 'PingFang SC'; color: cyan">本文内容抓取自网络，如有侵权请来信通知下架</p></center>
-    {% endif %}
-{% endblock %}
-</center>
+            {% if now %}
+                <center><p style="font-family: 'PingFang SC';">现在时刻: {{ now }}</p></center>
+            {% else %}
+                <center> <p style="font-family: 'PingFang SC'; color: cyan">人生苦短，我用Python</p></center>
+            {% endif %}
+        {% endblock %}
+    </center>
 </div>
