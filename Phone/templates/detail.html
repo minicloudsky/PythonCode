@@ -1,0 +1,28 @@
+<!-- detail.html extends 'base,html' -->
+{% extends "base.html" %}
+{% block title %} {{ product.nickname |default:"找不到指定的手机"}} {% endblock %}
+{% block content %}
+    <div class="container" align="center">
+        {% if product %}
+            <table>
+                <tr> <td align="center"><h3> {{ product.nickname }}  </h3></td> </tr>
+                <tr> <td align="center"><h3> {{ product.description }}  </h3></td> </tr>
+                <tr> <td align="center"><h3> {{ product.year }} 年出厂  </h3></td> </tr>
+                <tr> <td align="center"><h3> {{ product.price }} 元 </h3></td> </tr>
+                {% for image in images %}
+                    {%  if forloop.first %}
+                        <tr><td align="center">
+                    {% endif %}
+                <img src="{{ image.url }}" width="350"><br>
+                {% if forloop.last %}
+                    </td></tr>
+                {% endif %}
+                {% empty %}
+                    <tr><td align="center">暂无图像</td></tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <h2>找不到指定的手机</h2>
+        {% endif %}
+    </div>
+{% endblock %}
