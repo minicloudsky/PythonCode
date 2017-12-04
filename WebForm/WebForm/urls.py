@@ -1,4 +1,4 @@
-"""form URL Configuration
+"""WebForm URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/1.9/topics/http/urls/
@@ -15,15 +15,8 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from mysite import views
-
+from formsite import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$',views.index),
-    # 前面接收数字，后面接收文字
-    url(r'^(\d+)/(\w+)/$',views.index),
-    url(r'^about',views.about),
-    url(r'^add/(\d+)/(\d+)/$',views.add),
-    url(r'^list/$',views.listing),
-    url(r'^post/$',views.posting),
+    url(r'^$',views.index)
 ]

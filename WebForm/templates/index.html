@@ -1,0 +1,15 @@
+<!-- index.html -->
+{% extends "base.html" %}
+{% block title %} 我有话说 {% endblock %}
+{% block content %}
+<div class="container">
+    <form name="my form" action="/" method="post">
+        <label for="user_id">Your ID:</label>
+        <input id="user_id" type="text" name="user_id">
+        <label for="user_pass">Your Password:</label>
+        <input id="user_pass" type="password" name="user_pass">
+        <input type="submit" value="登录">
+        <input type="reset" value="重填">
+    </form>
+</div>
+{% endblock %}

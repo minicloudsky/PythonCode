@@ -2,10 +2,7 @@ from mysite import models
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template.loader import get_template
-from .models import Mood,Post
 # Create your views here.
-
-
 def index(request, pid=None, del_pass = None):
     template = get_template('index.html')
     posts = models.Post.objects.filter(enabled=True).order_by('-pub_date')[:30]
@@ -20,8 +17,10 @@ def index(request, pid=None, del_pass = None):
         pwd = request.GET.get('pwd')
         content = request.GET.get('content')
         usermood = request.GET.get('mood')
-    except:
-        message = '如果要发帖必须填写每一个字段'
+    except :
+        pass
+        # nickname = None
+        # message = '如果要发帖必须填写每一个字段...'
     if del_pass and pid:
         try:
             post = models.Post.objects.get(id = pid)
@@ -63,6 +62,21 @@ def add(request,a,b):
     c = int(a)+ int(b)
     return HttpResponse(str(c))
 
+
+def listing(request):
+    template = get_template('listing.html')
+    posts = models.Post.objects.filter(enabled=True).order_by('-pub_date')[:150]
+    moods = models.Mood.objects.all()
+    html = template.render(locals())
+    return HttpResponse(html)
+
+
+def posting(request):
+    template = get_template('posting.html')
+    moods = models.Mood.objects.all()
+    message = '如果要发布信息，那么每一个字段都要填...'
+    html = template.render(locals())
+    return HttpResponse(html)
 
 
 
