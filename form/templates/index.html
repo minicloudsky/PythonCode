@@ -16,7 +16,7 @@
     }
 </style>
 {% extends "base.html" %}
-{% block title  %} 我有话要说 {% endblock %}
+{% block title  %} 心灵社区 {% endblock %}
 {% block content %}
     <div class="container">
         {% if message %}
@@ -32,8 +32,9 @@
                 {% endfor %}</p>
             <br>
             <label style="font-family: Verdana;color: tan;font-size: 25px;">心情留言板:</label><br>
-            <textarea name="content" rows="10" cols="70" style= "overflow:hidden; "> </textarea><br>
-            <p></p>
+            <p><textarea name="content"  rows="10" cols="70" style= "overflow:hidden; "> </textarea>
+                <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=316759&auto=0&height=66"></iframe>
+            </p><br>
             <label>您的昵称:</label>&nbsp;
             <input type="text" name="nickname">&nbsp;
             <label >发帖/删帖密码:</label>&nbsp;
@@ -44,7 +45,7 @@
         <div class="row">
             <div class="panel panel-default">
                 <div class="panel-heading" align="center">
-                    <h3>宝宝心里苦，宝宝只在这里说(๑•́ωก̀๑)</h3>
+                    <h3 style="color: darkorange">宝宝心里苦，宝宝只在这里说(๑•́ωก̀๑)</h3>
                 </div>
             </div>
             {% for p in posts %}

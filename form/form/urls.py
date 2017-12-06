@@ -22,8 +22,11 @@ urlpatterns = [
     url(r'^$',views.index),
     # 前面接收数字，后面接收文字
     url(r'^(\d+)/(\w+)/$',views.index),
-    url(r'^about',views.about),
-    url(r'^add/(\d+)/(\d+)/$',views.add),
+    url(r'^about/$',views.about),
     url(r'^list/$',views.listing),
-    url(r'^post/$',views.posting),
+    url(r'^get/$',views.get),
+    # post method
+    url(r'^post/$', views.post),
+    # contact
+    url(r'^contact/$',views.contact),
 ]

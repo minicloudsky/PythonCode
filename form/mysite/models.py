@@ -1,7 +1,7 @@
 from django.db import models
 # admin username: django pwd: admin123
 # Create your models here.
-
+from django.utils import timezone
 
 class Mood(models.Model):
     status = models.CharField(max_length=10,null=False)
@@ -23,9 +23,17 @@ class Post(models.Model):
     def __unicode__(self):
         return self.message
 
+class Letter(models.Model):
+    username = models.CharField(max_length=100)
+    city = models.CharField(max_length=100)
+    school = models.CharField(max_length=100)
+    email = models.EmailField(max_length=100)
+    content = models.TextField()
 
-class Person(models.Model):
-    name = models.CharField(max_length=30)
-    age = models.IntegerField()
+    def __unicode__(self):
+        return self.username
+
+
+
 
 

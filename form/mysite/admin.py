@@ -7,12 +7,11 @@ class PostAdmin(admin.ModelAdmin):
 class MoodAdmin(admin.ModelAdmin):
     list_display = ('status',)
 
-
-class PersonAdmin(admin.ModelAdmin):
-    list_display = ('name','age',)
-    ordering = ('-age',)
-
+class LetterAdmin(admin.ModelAdmin):
+    list_display = ('username','city','school','email','content')
 
 admin.site.register(models.Mood,MoodAdmin)
 admin.site.register(models.Post,PostAdmin)
-admin.site.register(models.Person,PersonAdmin)
+admin.site.register(models.Letter,LetterAdmin)
+
+

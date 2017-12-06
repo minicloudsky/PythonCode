@@ -1,13 +1,17 @@
-<!-- -->
-{%  extends "base.html" %}
+<!-- 该页面为用post请求接收数据
+用post请求来验证CSRF
+使用post请求发送数据，必须在form下加上
+{ % csrf_token %}
+-->
+{% extends "base.html" %}
 {% block title %} 我有话要说 {% endblock %}
 {% block content %}
     <div class="container">
         {%  if message %}
             <div class="alert alert-warning">{{ message }}</div>
         {% endif %}
-
-        <form name="my_form" action="/" method="get">
+        <form name="my_form" action="/" method="post">
+        {% csrf_token %}
             <h3 style="font-family: 'PingFang SC';color:deepskyblue;font-size: 25px;">现在的心情:</h3>
             <p style="font-size: 20px">
                 {% for m in moods %}
