@@ -1,8 +1,6 @@
 #-*-coding: utf-8 -*-
 import requests
 import re
-import time
-from selenium import webdriver
 import random
 ua_pc = [ 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36',
         'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50',
@@ -27,13 +25,5 @@ ua_mobile = ['Mozilla/5.0(iPhone;U;CPUiPhoneOS4_3_3likeMacOSX;en-us)AppleWebKit/
                  'Mozilla/5.0(iPhone;U;CPUiPhoneOS4_3_3likeMacOSX;en-us)AppleWebKit/533.17.9(KHTML,likeGecko)Version/5.0.2Mobile/8J2Safari/6533.18.5']
 header_pc = {'User-Agent':random.choice(ua_pc)}
 header_mobile ={'User-Agent': random.choice(ua_mobile)}
-
-url = 'https://www.taobao.com/'
-driver = webdriver.PhantomJS()
-driver.get(url)
-driver.find_element_by_xpath('/html/body/div[4]/div[1]/div[1]/div[1]/div[2]').send_keys("燕麦片")
-print(driver.current_url)
-regex = '<a href="(.*?)" .*?>(.*?)</a>'
-list = re.findall(re.compile(regex),driver.page_source)
-for i in list:
-    print(i)
+print(header_pc)
+print(header_mobile)
