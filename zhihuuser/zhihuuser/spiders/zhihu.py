@@ -21,9 +21,9 @@ class ZhihuSpider(scrapy.Spider):
     def start_requests(self):
         yield Request(self.user_url.format(user=self.start_user,include=self.user_query,callback =self.parse_user ))
         yield Request(self.follows_url.format(user=self.start_user,include=self.follows_query,offset=0,limit=20
-                                      , callback=self.parse_follows),callback= self.parse_follows)
+                                      ,),callback= self.parse_follows)
         yield Request(self.followers_url.format(user=self.start_user, include=self.followers_query, offset=0, limit=20
-                                              , callback=self.parse_follows), callback=self.parse_followers)
+                                              ,), callback=self.parse_followers)
 
     #把轮子的雇主列表传递给解析用户的列表
     def parse_user(self,response):
@@ -35,6 +35,7 @@ class ZhihuSpider(scrapy.Spider):
         yield item
         # 重新递归
         yield Request(self.follows_url.format(user=result.get('url_token'),include=self.follows_query,limit=20,offset=0),self.parse_follows)
+        yield Request(self.followers_url.format(user=result.get('url_token'),include=self.followers_query,limit=20,offset=0),self.parse_followers)
 
     #
     def parse_follows(self, response):
@@ -42,8 +43,17 @@ class ZhihuSpider(scrapy.Spider):
         if 'data' in results.keys():
             for result in results.get('data'):
                 yield Request(self.user_url.format(user=result.get('url_token'),include=self.user_query),self.parse_user)
+        # 处理下一页
+        if 'paging' in results.keys() and results.get('paging').get('is_end')==False:
+            next_page = results.get('paging').get('next')
+            yield Request(next_page,self.parse_follows)
 
-
+    def parse_followers(self, response):
+        results = json.loads(response.text)
+        if 'data' in results.keys():
+            for result in results.get('data'):
+                yield Request(self.user_url.format(user=result.get('url_token'),include=self.user_query),self.parse_user)
+        # 处理下一页
         if 'paging' in results.keys() and results.get('paging').get('is_end')==False:
             next_page = results.get('paging').get('next')
             yield Request(next_page,self.parse_follows)

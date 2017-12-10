@@ -78,19 +78,6 @@ class DoubanMovie:
         self.all_comments.append("导演:" + str(self.director) + "\n")
         print("导演:" + str(self.director))
 
-    """
-    def get_movie_nation(self):
-        xpath = '//*[@id="info"]/br[5]/text()'
-        req = requests.get(self.movie_index, headers=header)
-        selector = etree.HTML(req.text)
-        content = selector.xpath(xpath)
-        print(content)
-        # if content[0]!='':
-        #     self.nation = content[0]
-        # self.all_comments.append(self.movie_name + "的国家为:" + str(self.nation) + "\n")
-        # print(self.movie_name + "国籍为:" + str(self.nation))
-    """
-
     # 获取评价人数
     def get_evaluate_person(self):
         xpath = '//*[@id="content"]/div[2]/div[1]/section/header/h2/span/a/text()'

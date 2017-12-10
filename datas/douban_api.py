@@ -4,6 +4,8 @@ import os
 import sys
 from pandas import DataFrame
 from urllib.parse import quote
+import pymongo
+from pymongo import MongoClient
 header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/62.0.3202.94 Safari/537.36'}
 url = 'https://movie.douban.com/j/search_subjects?type=tv&tag=%E5%9B%BD%E4%BA%A7%E5%89%A7&sort=rank&page_limit=20&page_start=0'
 r = requests.get(url)
@@ -26,6 +28,7 @@ class Douban_Movie():
         self.cover = []
         self.is_new = []
         self.playable = []
+        self.json = None
         self.data = {}
         self.get_json()
         self.download_cover()
@@ -44,7 +47,7 @@ class Douban_Movie():
         sort = self.sort[sort-1]
         self.user_type = tag
         self.user_sort = sort
-        page_limit = int(input("请输入电视剧数量:\n"))
+        page_limit = int(input("请输入电视剧数量(电视剧数量应该小于等于500):\n"))
         page_start = int(input("请输入开始页:\n"))
         url = self.generate_url(tag,sort,page_limit,page_start)
         return url
@@ -59,6 +62,18 @@ class Douban_Movie():
             except:
                 pass
             data = r.json()
+            self.json = r.json()
+            try:
+                douban = MongoClient('localhost', 27017)
+                douban_db = douban['HelloWorld']
+                # 连接douban_movie这个表，如果不存在则自动创建
+                douban_set = douban_db.uk_tv
+                douban_set.insert(self.json)
+                douban_set.save(self.json)
+                print("成功存入数据库")
+            except EnvironmentError:
+                print("存入数据库失败")
+                pass
             dict = data.values()
             list = []
             for i in dict:
@@ -97,7 +112,7 @@ class Douban_Movie():
                 pass
 
 if __name__ == '__main__':
-    path = "D:\\douban"
+    path = "D:\\"
     print("豆瓣电影数据默认保存在D:盘哦")
     douban = Douban_Movie(path)
 
