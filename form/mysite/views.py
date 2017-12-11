@@ -98,3 +98,13 @@ def contact(request):
     request_context.push(locals())
     html = template.render(request_context)
     return HttpResponse(html)
+
+def movie(request):
+    template = get_template('movie.html')
+    html = template.render(locals())
+    return HttpResponse(html)
+
+def test_cn(request):
+    template = get_template('test_cn.html')
+    html = template.render(locals())
+    return HttpResponse(html)

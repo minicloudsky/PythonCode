@@ -1,0 +1,190 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>无标题文档</title>
+    <style type="text/css">
+        /*这里我们添加一些CSS定义*/#w h1
+        {
+            color: #fff;
+            font-size: 14px;
+            line-height: 35px;
+            padding: 5px;
+            margin-bottom: 25px;
+            background: #d85588;
+            border-left: 5px solid #b44771;
+        }
+        h2
+        {
+            font-size: 12px;
+            font-weight: bold;
+            overflow: hidden; /*white-space: nowrap;  不换行*/
+            line-height: 20px;
+        }
+        .linkc
+        {
+            width: 100%;
+        }
+        #morewrapper
+        {
+            text-align: center;
+            padding: 30px;
+            position: relative;
+        }
+        #morewrapper span
+        {
+            font-size: 14px;
+            font-family: 'microsoft yahei' , Arial, sans-serif;
+            color: #fff;
+            border: 1px solid #D85588;
+            padding: 10px 15px;
+            background: #D85588;
+            cursor: pointer;
+        }
+        /*如果需要添加一些CSS过渡效果，请添加如下代码*/.isotope, .isotope .isotope-item
+        {
+            -webkit-transition-duration: 0s;
+            -moz-transition-duration: 0s;
+            -ms-transition-duration: 0s;
+            -o-transition-duration: 0s;
+            transition-duration: 0s;
+        }
+        .isotope
+        {
+            -webkit-transition-property: height, width;
+            -moz-transition-property: height, width;
+            -ms-transition-property: height, width;
+            -o-transition-property: height, width;
+            transition-property: height, width;
+        }
+        .isotope .isotope-item
+        {
+            -webkit-transition-property: -webkit-transform, opacity;
+            -moz-transition-property: -moz-transform, opacity;
+            -ms-transition-property: -ms-transform, opacity;
+            -o-transition-property: -o-transform, opacity;
+            transition-property: transform, opacity;
+        }
+    </style>
+    <!--倒入需要引用的JS类库 -->
+
+    <script type="text/javascript" src="http://www.gbtags.com/gb/networks/uploads/06242ba0-40a1-45fd-946f-cc89e0df64c9/js/jquery-1.7.1.min.js"></script>
+
+    <script type="text/javascript" src="http://www.gbtags.com/gb/networks/uploads/06242ba0-40a1-45fd-946f-cc89e0df64c9/js/jquery.jribbble.min.js"></script>
+
+    <script type="text/javascript" src="http://www.gbtags.com/gb/networks/uploads/06242ba0-40a1-45fd-946f-cc89e0df64c9/js/jquery.isotope.min.js"></script>
+
+    <script type="text/javascript" src="http://www.gbtags.com/gb/networks/uploads/06242ba0-40a1-45fd-946f-cc89e0df64c9/js/jquery.imagesloaded.min.js"></script>
+
+    <script type="text/javascript">
+        var zxPage = 1;
+        $(function() {
+
+            //底部执行方法  下拉
+            $(window).bind('scroll', function() { show() });
+
+            function show() {
+
+                if ($(window).scrollTop() + $(window).height() >= $(document).height()) {
+                    $('#showmore').text('加载中...');
+                    loadshots();
+                }
+            }
+
+            //数据加载
+            //定义相关变量
+            var $wallcontent = $('#wallcontent'), pagenum = 1, $showmore = $('#showmore');
+
+            //定义isotope的初始参数
+            $wallcontent.isotope({
+                itemSelector: 'article' //定义页面中那个元素作为isotope布局元素
+            });
+
+            //定义用户点击按钮“加载更多”后的逻辑
+            function loadshots() {
+                //这里unbind点击事件
+                $showmore.off('click');
+
+                $(this).text('加载中...');
+
+                //这里调用jdribble的相关API来获取最流行的dribbble设计作品，如果你需要获取其它数据，例如ajax在，这里修改即可
+
+                $.ajax({
+                    type: "post",
+                    dataType: "json",
+                    url: 'testzhou.aspx?NoCopyRight=1&type=ajax&Action=GetList' + '&Page=' + zxPage,
+                    cache: false,
+                    success: function(json) {
+                        if (json.productFwm.length > 0) {
+                            var items = [];
+
+                            $.each(json.productFwm, function(i, shot) {
+                                items.push('<article style="border-bottom: 2px solid #000000;width: 100%;">');
+                                items.push('<div class="details" ><h2>发表者：' + shot.UserName + '    发表时间：' + shot.Addtime + '</h2></div>');
+                                items.push('<div class="details" style="font-size:12px;">' + shot.Contents + '</div>');
+                                if (shot.Images != "") {
+                                    items.push('<a href="' + shot.Images + '" target="_blank" class="linkc"><img src="' + shot.Images + '"></a>');
+                                    items.push('<img src="http://etp2012.wsdict.com:8000/upload/ProductImg/329/29/c3cf4f99a1e3cab6.jpg">');
+                                    items.push('<img src="http://etp2012.wsdict.com:8000/upload/ProductImg/206/6/3213365a9a5aa98c.jpg">');
+                                    items.push('<img src="http://etp2012.wsdict.com:8000/upload/uploadfiles/logo.gif">');
+                                    items.push('<img src="http://etp2012.wsdict.com:8000/upload/ProductImg/329/29/c3cf4f99a1e3cab6.jpg">');
+                                    items.push('<img src="http://etp2012.wsdict.com:8000/upload/ProductImg/329/29/c3cf4f99a1e3cab6.jpg">');
+                                    
+                                }
+                                items.push('<div class="details"><h2>回复数：' + shot.RepNum + '    发表时间：' + shot.Addtime + '</h2></div>');
+                                items.push('</article>');
+
+                            });
+
+                            var newEls = items.join(''), tmpcontent = $(newEls);
+
+                            $wallcontent.append(tmpcontent);
+
+                            //如果你需要加载内容中包含了图片，可能需要预先加载，以避免布局元素的叠加情况，代码如下：
+                            //$wallcontent.isotope('appended', tmpcontent).isotope('reLayout');
+
+                            $wallcontent.imagesLoaded(function() {
+                                $wallcontent.isotope('appended', tmpcontent).isotope('reLayout');
+                                //加载完成后重新bind事件
+                                $showmore.text('加载更多>>').on('click', loadshots);
+                            });
+
+                            //以上代码保证生成布局前，所有图片都已经加载
+                        } else {
+                            $showmore.text('没有更多数据');
+                            //解除事件绑定
+                            $(window).unbind("scroll");
+                            return;
+                        }
+                    },
+                    error: function() { alert('error'); }
+                });       //end ajax
+
+                zxPage++;
+            }
+
+            //绑定方法到加载更多按钮
+            $showmore.on('click', loadshots);
+
+            //最后我们添加一个自动点击效果，这样用户加载页面自动会加载第一页
+            $showmore.trigger('click');
+        });
+    </script>
+
+</head>
+<body>
+    <!-- 首先我们设计HTML -->
+    <div style="width: 400px; text-align: center; margin: 0 auto;">
+        <section id="w">
+  <h1>酒真快-社区论坛</h1></section>
+  <section id="wallcontent"></section>
+  
+  <div id="morewrapper">
+    <span id="showmore">加载更多>></span>
+  </div>
+    </div>
+</body>
+</html>
+

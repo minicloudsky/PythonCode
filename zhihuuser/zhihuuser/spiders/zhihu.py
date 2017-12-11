@@ -2,7 +2,7 @@
 import scrapy
 import json
 from scrapy import Request
-from ..items import UserItem
+from zhihuuser.items import UserItem
 
 
 class ZhihuSpider(scrapy.Spider):
@@ -21,9 +21,9 @@ class ZhihuSpider(scrapy.Spider):
     def start_requests(self):
         yield Request(self.user_url.format(user=self.start_user,include=self.user_query,callback =self.parse_user ))
         yield Request(self.follows_url.format(user=self.start_user,include=self.follows_query,offset=0,limit=20
-                                      ,),callback= self.parse_follows)
+                                      ),self.parse_follows)
         yield Request(self.followers_url.format(user=self.start_user, include=self.followers_query, offset=0, limit=20
-                                              ,), callback=self.parse_followers)
+                                       ), self.parse_followers)
 
     #把轮子的雇主列表传递给解析用户的列表
     def parse_user(self,response):
@@ -34,8 +34,10 @@ class ZhihuSpider(scrapy.Spider):
                 item[field] = result.get(field)
         yield item
         # 重新递归
-        yield Request(self.follows_url.format(user=result.get('url_token'),include=self.follows_query,limit=20,offset=0),self.parse_follows)
-        yield Request(self.followers_url.format(user=result.get('url_token'),include=self.followers_query,limit=20,offset=0),self.parse_followers)
+        yield Request(self.follows_url.format(user=result.get('url_token'),include=self.follows_query,limit=20,offset=0),
+                      self.parse_follows)
+        yield Request(self.followers_url.format(user=result.get('url_token'),include=self.followers_query,limit=20,offset=0),
+                      self.parse_followers)
 
     #
     def parse_follows(self, response):
@@ -56,4 +58,5 @@ class ZhihuSpider(scrapy.Spider):
         # 处理下一页
         if 'paging' in results.keys() and results.get('paging').get('is_end')==False:
             next_page = results.get('paging').get('next')
-            yield Request(next_page,self.parse_follows)
+            yield Request(next_page,
+                          self.parse_follows)

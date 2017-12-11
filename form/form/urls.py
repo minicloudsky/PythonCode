@@ -29,4 +29,6 @@ urlpatterns = [
     url(r'^post/$', views.post),
     # contact
     url(r'^contact/$',views.contact),
+    url(r'^movie/$',views.movie),
+    url(r'^test_cn/$',views.test_cn),
 ]
