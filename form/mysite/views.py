@@ -104,7 +104,45 @@ def movie(request):
     html = template.render(locals())
     return HttpResponse(html)
 
-def test_cn(request):
-    template = get_template('test_cn.html')
+def cn(request):
+    template = get_template('cn.html')
     html = template.render(locals())
     return HttpResponse(html)
+def doc(request):
+    template = get_template('doc.html')
+    html = template.render(locals())
+    return HttpResponse(html)
+def hk(request):
+    template = get_template('hk.html')
+    html = template.render(locals())
+    return HttpResponse(html)
+def japan(request):
+    template = get_template('japan.html')
+    html = template.render(locals())
+    return HttpResponse(html)
+def japan_cartoon(request):
+    template = get_template('japan_cartoon.html')
+    html = template.render(locals())
+    return HttpResponse(html)
+def multi(request):
+    template = get_template('multi.html')
+    html = template.render(locals())
+    return HttpResponse(html)
+def sk(request):
+    template = get_template('sk')
+    html = template.render(locals())
+    return HttpResponse(html)
+def uk(request):
+    template = get_template('uk.html')
+    html = template.render(locals())
+    return HttpResponse(html)
+def usa(request):
+    template = get_template('usa.html')
+    html = template.render(locals())
+    return HttpResponse(html)
+
+
+
+
+
+

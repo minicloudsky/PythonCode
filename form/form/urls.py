@@ -29,6 +29,15 @@ urlpatterns = [
     url(r'^post/$', views.post),
     # contact
     url(r'^contact/$',views.contact),
+
     url(r'^movie/$',views.movie),
-    url(r'^test_cn/$',views.test_cn),
+    url(r'^cn/$',views.cn),
+    url(r'^doc/$',views.doc),
+    url(r'^hk/$',views.hk),
+    url(r'^japan_cartoon/$',views.japan_cartoon),
+    url(r'^japan/$',views.japan),
+    url(r'^multi/$',views.multi),
+    url(r'^sk/$',views.uk),
+    url(r'^usa/$',views.usa),
+    url(r'^uk/$',views.uk),
 ]
