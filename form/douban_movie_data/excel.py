@@ -6,7 +6,7 @@ import numpy as np
 import codecs
 # df = pd.read_excel("china.xls")
 def write_html(country):
-    data = xlrd.open_workbook("D:\\douban\\"+country+".xls")
+    data = xlrd.open_workbook(country+".xls")
     table = data.sheet_by_index(0)
     url = []
     title = []
@@ -70,7 +70,7 @@ def write_html(country):
     </center>
 <div class="jq22-container">
       <div class="jq22-content bgcolor-3">
-    <div id="div1">"""+img_url+"""
+    <div id="div1">"""+ img_url + """
         </div>
   </div>
     </div>

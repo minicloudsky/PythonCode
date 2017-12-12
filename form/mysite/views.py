@@ -47,7 +47,7 @@ def index(request, pid=None, del_pass = None):
         message = '成功存储，请记得你的编辑密码[{}]，信息需要审核后即可显示.'.format(pwd)
     html = template.render(locals())
     return HttpResponse(html)
-
+# about page
 def about(request):
     template = get_template('about.html')
     now = time.ctime()
@@ -145,7 +145,7 @@ def usa(request):
     template = get_template('usa.html')
     html = template.render(locals())
     return HttpResponse(html)
-
+# 显示文章列表
 def passage(request):
     template = get_template('passage.html')
     posts = Passage.objects.all()
