@@ -5,6 +5,9 @@ from django.template.loader import get_template
 from django.template import RequestContext
 from django.views.decorators.csrf import csrf_protect
 import time
+import datetime
+from .models import Passage
+import markdown
 # Create your views here.
 # home page
 def index(request, pid=None, del_pass = None):
@@ -142,6 +145,28 @@ def usa(request):
     template = get_template('usa.html')
     html = template.render(locals())
     return HttpResponse(html)
+
+def passage(request):
+    template = get_template('passage.html')
+    posts = Passage.objects.all()
+    posts_list = list()
+    for post in posts:
+        posts_list.append(post.title)
+    now = datetime.datetime.now()
+    # locals()函数会把当前内存中收到的所有局部变量使用字典类型打包起来
+    html = template.render(locals())
+    return HttpResponse(html)
+
+def showpassage(request,slug):
+    template = get_template('article.html')
+    try:
+        post = Passage.objects.get(slug= slug)
+        if post != None:
+            html = template.render(locals())
+            return HttpResponse(html)
+    except:
+        # 发生异常找不到时候，重定向到首页
+        return redirect('/')
 
 
 

@@ -13,10 +13,10 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url,include
 from django.contrib import admin
 from mysite import views
-
+import django_markdown
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$',views.index),
@@ -29,7 +29,7 @@ urlpatterns = [
     url(r'^post/$', views.post),
     # contact
     url(r'^contact/$',views.contact),
-
+    # 配置伊人电影的url
     url(r'^movie/$',views.movie),
     url(r'^cn/$',views.cn),
     url(r'^doc/$',views.doc),
@@ -40,4 +40,7 @@ urlpatterns = [
     url(r'^sk/$',views.uk),
     url(r'^usa/$',views.usa),
     url(r'^uk/$',views.uk),
+    # 配置博客文章的url
+    url(r'^passage/$',views.passage),
+    url(r'^article/(\w+)$', views.showpassage),
 ]

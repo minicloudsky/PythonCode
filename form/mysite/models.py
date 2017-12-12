@@ -1,8 +1,8 @@
+
 from django.db import models
 # admin username: django pwd: admin123
 # Create your models here.
 from django.utils import timezone
-
 class Mood(models.Model):
     status = models.CharField(max_length=10,null=False)
 
@@ -32,6 +32,19 @@ class Letter(models.Model):
 
     def __unicode__(self):
         return self.username
+
+class Passage(models.Model):
+    title = models.CharField(max_length=200)
+    # slug为文章编号，比如写的第一篇就写1
+    slug = models.CharField(max_length=200)
+    body = models.TextField()
+    pub_date = models.DateTimeField(auto_now_add=True )
+
+    class Meta:
+        ordering = ('-pub_date',)
+
+    def __unicode__(self):
+        return self.title
 
 
 

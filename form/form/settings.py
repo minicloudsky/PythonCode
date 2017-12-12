@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # 注册下你的app名字，我的是mainsite
     'mysite',
+    # 注册markdown_deux插件
+    'markdown_deux',
+    # 'django.contrib.markup',
 ]
 
 MIDDLEWARE_CLASSES = [
