@@ -76,6 +76,7 @@ def post(request):
     request_context.push(locals())
     html = template.render(request_context)
     return HttpResponse(html)
+# 用post请求向管理员写信
 def contact(request):
     if request.method == 'POST':
         form = forms.ContactForm(request.POST)
@@ -99,6 +100,7 @@ def contact(request):
     html = template.render(request_context)
     return HttpResponse(html)
 
+# 以下几个函数，并不传输数据，只是为了渲染伊人电影的模板
 def movie(request):
     template = get_template('movie.html')
     html = template.render(locals())

@@ -1,6 +1,6 @@
 <!-- get method-->
 {%  extends "base.html" %}
-{% block title %} 我有话要说 {% endblock %}
+{% block title %} 宝宝要发帖 {% endblock %}
 {% block content %}
     <div class="container">
         {%  if message %}
@@ -14,11 +14,11 @@
                 {% endfor %}</p>
             <br>
             <label style="font-family: Verdana;color: darkorange; font-size: 20px">心情留言板:</label><br>
-            <textarea name="content" rows="10" cols="70" style= "overflow:hidden; "> </textarea><br>
+            <textarea name="content" rows="10" cols="70" style= "overflow:hidden; "> </textarea><br><br>
             <label>您的昵称:</label>&nbsp;
             <input type="text" name="nickname">
-            <label >发帖/删帖密码:</label>&nbsp;
-            <input type="password" name="pwd" id="pwd"><br>
+            <label >&nbsp;&nbsp;发帖/删帖密码:</label>&nbsp;
+            <input type="password" name="pwd" id="pwd"><br><br>
             <input type="submit" value="发帖">&nbsp;
             <input type="reset" value="清空重填">&nbsp;
         </form>
