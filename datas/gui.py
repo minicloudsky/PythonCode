@@ -242,7 +242,7 @@ if __name__ == '__main__':
     root.title("数据结构 — 排序")
     root.geometry("400x400")
     app = Application(root)
-    root.iconbitmap("hanhan.ico")
+    #root.iconbitmap("hanhan.ico")
     root.mainloop()
 
 

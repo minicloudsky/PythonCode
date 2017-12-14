@@ -21,8 +21,8 @@ class zhihu_User():
         self.answer = []
         self.image_list = []
         self.avatar = []
-        self.driver = webdriver.Chrome()
-        self.login(self.driver)
+        self.driver = webdriver.PhantomJS()
+        # self.login(self.driver)
         self.title = ""
         self.get_title()
         self.all_question_url = self.generate_url()
@@ -31,7 +31,7 @@ class zhihu_User():
         self.driver.close()
         self.write_answer()
         self.download_image()
-        self.download_avatar()
+        # self.download_avatar()
     # 登录到知乎
     def login(self,driver):
         login_url = 'https://www.zhihu.com/#signin'
@@ -127,7 +127,7 @@ class zhihu_User():
                 img = ".jpeg"
 
             try:
-                r = requests.get(i, headers=header, timeout=60)
+                r = requests.get(i, headers=header, timeout=40)
                 print("正在下载第 %s 张图片" % (count))
                 with codecs.open(self.path+"\\"+self.title+"\\"+"data-original"+"\\"+str(count)+img,'wb') as f:
                     f.write(r.content)
@@ -139,29 +139,31 @@ class zhihu_User():
         if not os.path.exists(self.path + "\\" + self.title + "\\" + "avatar"):
             os.mkdir(self.path + "\\" + self.title + "\\" + "avatar")
         count = 1
-
         for i in self.avatar:
             try:
-                r = requests.get(i, headers=header,timeout = 60)
+                r = requests.get(i, headers=header,timeout = 40)
                 with codecs.open(self.path + "\\" + self.title + "\\" + "avatar" + "\\" + str(count) +".jpg","wb") as f:
                     f.write(r.content)
                 print("正在下载第 %s 张头像 " %(count))
                 count += 1
             except:
                 pass
+def down(id,page):
+    question_id = id
+    username = '15716302402'
+    password = 'jyw831392'
+    path = "D:\\zhihu"
+    page_num = page
+    zhihu = zhihu_User(page_num,question_id, username, password, path)	
 if __name__ == '__main__':
-    # 要爬取的问题id，看一下浏览器的url，比如该问题url是https://www.zhihu.com/question/30850162/answers/created，
-    # 就在下面输入30850162，记得程序运行后要记得点击下程序打开的浏览器页面上知乎的验证码哦^_^
-    question_id = '39851186'
-    # 你的用户名
-    username = ''
-    # 你的知乎密码
-    password = ''
-    # 存储路径
-    path = "D:\\"
-    # 先点击知乎问题下面的按照时间排序，然后下拉页面到最后，有个1,2,3把总页数写到这里，其实，主要还是我selenium定位找不到这个数字。。。
-    page_num = 207
-    zhihu = zhihu_User(page_num,question_id, username, password, path)
+    down(67553801,16)
+    down(20196263,37)
+    down(47070876,20)
+    down(22911552,38)
+    down(31839156,4)
+    down(22212644,47)
+    down(29970826,5)
+
 
 
 
