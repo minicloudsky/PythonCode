@@ -97,7 +97,7 @@ def dumpdata(title,dynasty,author,content,tag,start):
 if __name__ == '__main__':
     path ="D:\\poetry"
     page = 500000
-    for i in range(46500,page,100):
+    for i in range(127700,page,100):
     	starts(i)
 
 
