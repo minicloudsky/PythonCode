@@ -210,7 +210,7 @@ class DoubanMovie:
             print("写入评论失败")
             raise IOError
 if __name__ == '__main__':
-    movie_id = "26861629"
+    movie_id = "1925032"
     movie_page = 90
     comments_path = "D:\\"
     douban = DoubanMovie(movie_id, movie_page, comments_path)

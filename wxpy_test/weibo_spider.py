@@ -6,8 +6,8 @@ from selenium import webdriver
 driver = webdriver.Chrome()
 driver.get('https://weibo.com/')
 time.sleep(6)
-username = ''
-pwd = ''
+username = '15716302402'
+pwd = 'appijyw231870t..'
 driver.find_element_by_xpath('//*[@id="loginname"]').send_keys(username)
 driver.find_element_by_xpath('//*[@id="pl_login_form"]/div/div[3]/div[2]/div/input').send_keys(pwd)
 driver.find_element_by_xpath('//*[@id="pl_login_form"]/div/div[3]/div[6]/a/span').click()
@@ -17,10 +17,14 @@ while True:
     f = codecs.open("E:\\wechat\\movie.txt", 'r', encoding='utf-8').readlines()
     for i in f:
         text += i
-    driver.get('https://weibo.com/u/5710928238/home?leftnav=1#1513515573373')
-    driver.find_element_by_xpath('//*[@id="v6_pl_content_publishertop"]/div/div[2]/textarea').send_keys(text)
-    time.sleep(random.randrange(1,5))
-    driver.find_element_by_xpath('//*[@id="v6_pl_content_publishertop"]/div/div[3]/div[1]/a').click()
+    try:
+        driver.get('https://weibo.com/u/5710928238/home?leftnav=1#1513515573373')
+        driver.find_element_by_xpath('//*[@id="v6_pl_content_publishertop"]/div/div[2]/textarea').send_keys(text)
+        time.sleep(random.randrange(1,5))
+        driver.find_element_by_xpath('//*[@id="v6_pl_content_publishertop"]/div/div[3]/div[1]/a').click()
+    except:
+        pr
+        pass
     time.sleep(random.randrange(100,200))
     file = codecs.open("E:\\wechat\\movie.txt", 'r', encoding='utf-8').readlines()
     if file ==f:
