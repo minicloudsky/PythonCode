@@ -10,11 +10,6 @@
         }
     }
 </script>
-<style>
-    p{
-        line-height: 10pt;
-    }
-</style>
 {% extends "base.html" %}
 {% load staticfiles %}
 {% block title  %} 心情驿站 {% endblock %}
@@ -26,10 +21,10 @@
             </div>
         {% endif %}
         <form name="my_form" action="/" method="get">
-            <h3 style="font-family: 'PingFang SC';color: coral">现在的心情:</h3>
+            <h3 style="font-family: 'PingFang SC';color: coral;font-size: 25px;">现在的心情:</h3>
             <p style="font-size: 20px;">
                 {% for m in moods %}
-                    <input style="width:25px;height:25px" type="radio" name="mood" value="{{ m.status }}"> {{ m.status }}
+                    <input style="width:30px;height:30px;font-size: 30px;" type="radio" name="mood" value="{{ m.status }}"> {{ m.status }}
                 {% endfor %}</p>
             <br>
             <label style="font-family: Verdana;color: tan;font-size: 25px;">心情留言板:</label><br>
@@ -39,29 +34,42 @@
             <label>您的昵称:</label>&nbsp;
             <input type="text" name="nickname">&nbsp;
             <label >发帖/删帖密码:</label>&nbsp;
-            <input type="password" name="pwd" id="pwd"><br>
+            <input type="password" name="pwd" id="pwd"><br><br>
             <input type="submit" value="发帖">&nbsp;
             <input type="reset" value="清空重填">
         </form>
         <div class="row">
-            <div class="panel panel-default">
-                <div class="panel-heading" align="center">
-                    <h3 style="color: darkorange">宝宝心里苦，宝宝只在这里说(๑•́ωก̀๑)</h3>
-                </div>
-            </div>
-            {% for p in posts %}
-                {% cycle "<div class='row'> <div class='col-md-6'>" "<div class='col-md-6'>" %}
-                <div class="panel panel-primary">
-                    <div class="panel-heading">[ {{ p.nickname }} ] 觉得 {{ p.mood.status }}</div>
-                    <div class="panel-body">{{ p.message | linebreaks }}</div>
-                    <div  class="panel-footer" align="right" >
-                        <i>{{ p.pub_date }}&nbsp;&nbsp;
-                            <span onclick="go_delete({{ p.id }})"><input type="button" value="删帖"></span>
-                        </i>
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading" align="center">
+                        <h3 style="color: deepskyblue">~~~宝宝心里苦，宝宝只在这里说(ಥ _ ಥ)~~~</h3>
                     </div>
                 </div>
-                </div>
-                {% cycle "" "" "</div>"%}
-            {% endfor %}
+                {% for p in posts %}
+                    {% cycle "<div class='row'> <div class='col-md-6'>" "<div class='col-md-6'>" %}
+                    <div class='panel {% cycle "panel-primary" "panel-info" "panel-warning" "panel-success" %}'>
+                        <div class="panel-heading">
+                            <table width="100%">
+                                <tr>
+                                    <td>
+                                        [ {{ p.nickname }} ] 觉得 {{ p.mood.status }}
+                                    </td>
+                                    <td align="right">
+                                        {{ p.pub_date }}&nbsp;&nbsp;
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="panel-body" style="font-size: 15px;">{{ p.message | linebreaks }}</div>
+                        <div  class="panel-footer" align="right" >
+                            <i>{{p.pub_date}}&nbsp;&nbsp;
+                                <span onclick="go_delete({{p.id}})"><input type="button" value=" 删帖 "></span>
+                            </i>
+                        </div>
+                    </div>
+                    </div>
+                    {% cycle "" "" "</div>"%}
+                {% endfor %}
+        </div>
     </div>
 {% endblock %}
