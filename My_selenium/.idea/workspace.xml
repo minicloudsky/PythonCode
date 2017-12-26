@@ -34,7 +34,7 @@
     <SUITE FILE_PATH="coverage/My_selenium$login_zhihu.coverage" NAME="login_zhihu Coverage Results" MODIFIED="1508418227285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$zeran_zhihu_answer.coverage" NAME="zeran_zhihu_answer Coverage Results" MODIFIED="1508572583466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$QQ.coverage" NAME="QQ好友爬虫 Coverage Results" MODIFIED="1508387663469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/My_selenium$zhihu_userspider.coverage" NAME="zhihu_userspider Coverage Results" MODIFIED="1512448159139" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/My_selenium$zhihu_userspider.coverage" NAME="zhihu_userspider Coverage Results" MODIFIED="1514116890837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$button_group.coverage" NAME="button_group Coverage Results" MODIFIED="1508415565483" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$douyu_selenium.coverage" NAME="douyu_selenium Coverage Results" MODIFIED="1508333666288" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/My_selenium$zhihu_User_API.coverage" NAME="zhihu_User_API Coverage Results" MODIFIED="1509446131227" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -55,16 +55,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="获取知乎问题下所有回答.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="获取知乎问题下所有回答.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/获取知乎问题下所有回答.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
+            <state relative-caret-position="1950">
               <caret line="129" column="61" lean-forward="false" selection-start-line="129" selection-start-column="61" selection-end-line="129" selection-end-column="61" />
               <folding>
                 <element signature="e#1209#1930#0" expanded="false" />
                 <element signature="e#2863#3986#0" expanded="false" />
                 <element signature="e#4042#4592#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="zhihu_userspider.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/zhihu_userspider.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4659">
+              <caret line="232" column="54" lean-forward="true" selection-start-line="232" selection-start-column="54" selection-end-line="232" selection-end-column="54" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,8 +130,8 @@
         <option value="D:/a.py" />
         <option value="$PROJECT_DIR$/zhihu_User_API.py" />
         <option value="$PROJECT_DIR$/zhihu_User_API_withURL.py" />
-        <option value="$PROJECT_DIR$/zhihu_userspider.py" />
         <option value="$PROJECT_DIR$/获取知乎问题下所有回答.py" />
+        <option value="$PROJECT_DIR$/zhihu_userspider.py" />
       </list>
     </option>
   </component>
@@ -154,7 +164,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../datas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spider" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="ToolWindowRun.ShowToolbar" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -171,7 +181,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.获取知乎问题下所有回答">
+  <component name="RunManager" selected="Python.zhihu_userspider">
     <configuration name="获取知乎问题下所有回答" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -271,8 +281,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.获取知乎问题下所有回答" />
-        <item index="1" class="java.lang.String" itemvalue="Python.zhihu_userspider" />
+        <item index="0" class="java.lang.String" itemvalue="Python.zhihu_userspider" />
+        <item index="1" class="java.lang.String" itemvalue="Python.获取知乎问题下所有回答" />
         <item index="2" class="java.lang.String" itemvalue="Python.zhihu_User_API_withURL" />
         <item index="3" class="java.lang.String" itemvalue="Python.zhihu_User_API" />
         <item index="4" class="java.lang.String" itemvalue="Python.a" />
@@ -668,13 +678,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhihu_userspider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="225" column="21" lean-forward="false" selection-start-line="225" selection-start-column="21" selection-end-line="225" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/空间相册.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -685,13 +688,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/获取知乎问题下所有回答.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
+        <state relative-caret-position="1950">
           <caret line="129" column="61" lean-forward="false" selection-start-line="129" selection-start-column="61" selection-end-line="129" selection-end-column="61" />
           <folding>
             <element signature="e#1209#1930#0" expanded="false" />
             <element signature="e#2863#3986#0" expanded="false" />
             <element signature="e#4042#4592#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/zhihu_userspider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4659">
+          <caret line="232" column="54" lean-forward="true" selection-start-line="232" selection-start-column="54" selection-end-line="232" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>

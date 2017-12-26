@@ -9,6 +9,9 @@
             alert("输入删帖密码后才可以删除帖子哦");
         }
     }
+    function register() {
+        alert("注册成功");
+    }
 </script>
 {% extends "base.html" %}
 {% load staticfiles %}
@@ -27,15 +30,15 @@
                     <input style="width:30px;height:30px;font-size: 30px;" type="radio" name="mood" value="{{ m.status }}"> {{ m.status }}
                 {% endfor %}</p>
             <br>
-            <label style="font-family: Verdana;color: tan;font-size: 25px;">心情留言板:</label><br>
+            <label style="font-family: Verdana;color: deepskyblue;font-size: 25px;">心情留言板:</label><br>
             <p><textarea name="content"  rows="10" cols="70" style= "overflow:hidden; "> </textarea>
                 <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=316759&auto=0&height=66"></iframe>
             </p><br>
-            <label>您的昵称:</label>&nbsp;
+            <label>用户名:</label>&nbsp;
             <input type="text" name="nickname">&nbsp;
-            <label >发帖/删帖密码:</label>&nbsp;
+            <label >密码:</label>&nbsp;
             <input type="password" name="pwd" id="pwd"><br><br>
-            <input type="submit" value="发帖">&nbsp;
+            <input type="submit" value="注册" onclick="register()">&nbsp;
             <input type="reset" value="清空重填">
         </form>
         <div class="row">
