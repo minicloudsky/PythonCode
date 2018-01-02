@@ -16,7 +16,6 @@ class zhihu_User():
         self.page_num = 1
         self.answer = []
         self.image_list = []
-        self.avatar = []
         self.driver = webdriver.PhantomJS()
         self.title = ""
         self.get_title()
