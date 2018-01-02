@@ -3,3 +3,4 @@
 [INFO  - 2018-01-02T06:52:06.727Z] Session [72688560-ef89-11e7-b693-9f9da92e66b6] - page.customHeaders:  - {}
 [INFO  - 2018-01-02T06:52:06.728Z] Session [72688560-ef89-11e7-b693-9f9da92e66b6] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
 [INFO  - 2018-01-02T06:52:06.728Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: 72688560-ef89-11e7-b693-9f9da92e66b6
+[INFO  - 2018-01-02T06:57:05.515Z] SessionManagerReqHand - _cleanupWindowlessSessions - Asynchronous Sessions clean-up phase starting NOW
