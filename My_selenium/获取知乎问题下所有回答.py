@@ -74,6 +74,7 @@ class zhihu_User():
             page+=1
         self.image_list = set(self.image_list)
         print(" 一共有 %s 张 图片 " %(len(self.image_list)))
+        self.driver.close()
     def write_answer(self):
         if not os.path.exists(self.path+"\\"+self.title[:-1]+"\\"):
             os.mkdir(self.path+"\\"+self.title[:-1]+"\\")
