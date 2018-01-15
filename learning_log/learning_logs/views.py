@@ -1,10 +1,12 @@
 from django.shortcuts import render,render_to_response,HttpResponse
 from .models import Topic
+from django.template.loader import get_template
+from django.http import HttpResponse
 # Create your views here.
 def index(request):
     """学习笔记的主页"""
-    return render_to_response('index.html')
-    # return HttpResponse('hhhhhh')
+    html = get_template('index.html')
+    return HttpResponse(html)
 
 def topics(request):
     # 显示所有的主题

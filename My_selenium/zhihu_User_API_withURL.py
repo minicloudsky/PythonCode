@@ -30,7 +30,7 @@ class zhihu_User():
         self.driver = webdriver.Chrome()
         # self.driver.set_window_size(500,500)
         # 登录
-        self.login(self.driver)
+        #self.login(self.driver)
         self.get_user_info()
         self.get_user_logo()
         # 回答页的总数
@@ -234,7 +234,7 @@ class zhihu_User():
         
 if __name__ == '__main__':
     # 要爬取的用户id，比如我的是vajiajia
-    user_id = 'Germey'
+    user_id = 'li-xing-6-47'
     # 你的用户名
     username = '15716302402'
     # 你的知乎密码

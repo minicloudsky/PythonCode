@@ -40,11 +40,12 @@ INSTALLED_APPS = [
     'learning_logs'
 ]
 
-MIDDLEWARE = [
+MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
@@ -130,3 +131,16 @@ TEMPLATE_DIRS = (
     'learning_logs',
 )
 
+if os.getcwd()=='/app':
+    import dj_database_url
+    DATABASES={
+        'default':dj_database_url.config(default='postgres://localhost')
+    }
+    SECURE_PROXY_SSL_HEADER = ('HTTP_XFORWARDED_PROTO','https')
+#     支持所有的主机头
+ALLOWED_HOSTS=['*']
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_ROOT = 'staticfiles'
+STATIC_FILE_DIRS = (
+    os.path.join(BASE_DIR,'static')
+)

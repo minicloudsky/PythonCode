@@ -19,6 +19,7 @@
     <SUITE FILE_PATH="coverage/datas$csvdata.coverage" NAME="csvdata Coverage Results" MODIFIED="1507557106708" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/datas$douban_json.coverage" NAME="douban_json Coverage Results" MODIFIED="1511943088829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/datas$pygal.coverage" NAME="改进pygal图表 Coverage Results" MODIFIED="1511673370867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/datas$proxy_spider.coverage" NAME="proxy_spider Coverage Results" MODIFIED="1515728483910" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/datas$plt.coverage" NAME="plt Coverage Results" MODIFIED="1511681922071" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/datas$americas.coverage" NAME="americas Coverage Results" MODIFIED="1511617420021" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/datas$scatter_squares.coverage" NAME="scatter_squares Coverage Results" MODIFIED="1511611714931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -31,7 +32,7 @@
     <SUITE FILE_PATH="coverage/datas$logger.coverage" NAME="加入现有的logger Coverage Results" MODIFIED="1513508038575" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/datas$douban_api.coverage" NAME="douban_api Coverage Results" MODIFIED="1512968739468" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/datas$weichat_officer_account.coverage" NAME="weichat_officer_account Coverage Results" MODIFIED="1514882080606" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/datas$.coverage" NAME="获取知乎问题下所有回答 Coverage Results" MODIFIED="1514883705909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../My_selenium" />
+    <SUITE FILE_PATH="coverage/datas$.coverage" NAME="获取知乎问题下所有回答 Coverage Results" MODIFIED="1515760199508" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../My_selenium" />
     <SUITE FILE_PATH="coverage/datas$_cn.coverage" NAME="微博_cn Coverage Results" MODIFIED="1514797536262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/datas$mpl_squares.coverage" NAME="mpl_squares Coverage Results" MODIFIED="1511611264599" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/datas$different_dice.coverage" NAME="different_dice Coverage Results" MODIFIED="1511615459005" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -39,59 +40,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="微博_cn.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/微博_cn.py">
+      <file leaf-file-name="proxy_spider.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/proxy_spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
-              <folding>
-                <element signature="e#15#45#0" expanded="true" />
-                <marker date="1514876299743" expanded="true" signature="1253:1424" ph="..." />
-                <marker date="1514876299743" expanded="true" signature="1488:1675" ph="..." />
-                <marker date="1514876299743" expanded="true" signature="1497:1650" ph="..." />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="获取知乎问题下所有回答.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="获取知乎问题下所有回答.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../My_selenium/获取知乎问题下所有回答.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="zhihu_userspider.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../My_selenium/zhihu_userspider.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="-1260">
+              <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
               <folding>
-                <element signature="e#51#81#0" expanded="true" />
+                <element signature="e#1593#1763#0" expanded="false" />
+                <element signature="e#1800#2014#0" expanded="false" />
+                <element signature="e#2049#2877#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="csvdata.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/csvdata.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="weichat_officer_account.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weichat_officer_account.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-600">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -150,6 +118,7 @@
         <option value="$PROJECT_DIR$/微博_cn.py" />
         <option value="$PROJECT_DIR$/../My_selenium/zhihu_userspider.py" />
         <option value="$PROJECT_DIR$/weichat_officer_account.py" />
+        <option value="$PROJECT_DIR$/proxy_spider.py" />
         <option value="$PROJECT_DIR$/../My_selenium/获取知乎问题下所有回答.py" />
       </list>
     </option>
@@ -160,9 +129,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="414" />
-    <option name="y" value="44" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="469" />
+    <option name="y" value="126" />
     <option name="width" value="804" />
     <option name="height" value="736" />
   </component>
@@ -183,7 +152,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../My_selenium/获取知乎问题下所有回答.py" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -290,7 +259,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="加入现有的logger" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="proxy_spider" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -303,7 +272,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="datas" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/加入现有的logger.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/proxy_spider.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -345,19 +314,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.加入现有的logger" />
-      <item index="1" class="java.lang.String" itemvalue="Python.微博_cn" />
-      <item index="2" class="java.lang.String" itemvalue="Python.zhihu_userspider" />
-      <item index="3" class="java.lang.String" itemvalue="Python.weichat_officer_account" />
-      <item index="4" class="java.lang.String" itemvalue="Python.获取知乎问题下所有回答" />
+      <item index="0" class="java.lang.String" itemvalue="Python.微博_cn" />
+      <item index="1" class="java.lang.String" itemvalue="Python.zhihu_userspider" />
+      <item index="2" class="java.lang.String" itemvalue="Python.weichat_officer_account" />
+      <item index="3" class="java.lang.String" itemvalue="Python.获取知乎问题下所有回答" />
+      <item index="4" class="java.lang.String" itemvalue="Python.proxy_spider" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.获取知乎问题下所有回答" />
-        <item index="1" class="java.lang.String" itemvalue="Python.weichat_officer_account" />
-        <item index="2" class="java.lang.String" itemvalue="Python.微博_cn" />
-        <item index="3" class="java.lang.String" itemvalue="Python.zhihu_userspider" />
-        <item index="4" class="java.lang.String" itemvalue="Python.加入现有的logger" />
+        <item index="1" class="java.lang.String" itemvalue="Python.proxy_spider" />
+        <item index="2" class="java.lang.String" itemvalue="Python.weichat_officer_account" />
+        <item index="3" class="java.lang.String" itemvalue="Python.微博_cn" />
+        <item index="4" class="java.lang.String" itemvalue="Python.zhihu_userspider" />
       </list>
     </recent_temporary>
   </component>
@@ -375,7 +344,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="469" y="126" width="804" height="736" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.179375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -384,7 +353,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4901704" sideWeight="0.505" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48956662" sideWeight="0.505" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -415,13 +384,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/douban_api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/douban_api.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -736,10 +698,17 @@
         <state relative-caret-position="390">
           <caret line="20" column="6" lean-forward="false" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="6" />
           <folding>
-            <element signature="e#15#45#0" expanded="true" />
-            <marker date="1514876299743" expanded="true" signature="1253:1424" ph="..." />
-            <marker date="1514876299743" expanded="true" signature="1488:1675" ph="..." />
-            <marker date="1514876299743" expanded="true" signature="1497:1650" ph="..." />
+            <element signature="e#15#45#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../My_selenium/zhihu_userspider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding>
+            <element signature="e#51#81#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -754,26 +723,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/weichat_officer_account.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-600">
+        <state relative-caret-position="30">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../My_selenium/zhihu_userspider.py">
+    <entry file="file://$PROJECT_DIR$/../My_selenium/获取知乎问题下所有回答.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="2" column="17" lean-forward="true" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        <state relative-caret-position="-1260">
+          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
           <folding>
-            <element signature="e#51#81#0" expanded="true" />
+            <element signature="e#1593#1763#0" expanded="false" />
+            <element signature="e#1800#2014#0" expanded="false" />
+            <element signature="e#2049#2877#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../My_selenium/获取知乎问题下所有回答.py">
+    <entry file="file://$PROJECT_DIR$/proxy_spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
-          <caret line="23" column="25" lean-forward="false" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
+        <state relative-caret-position="270">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
           <folding />
         </state>
       </provider>

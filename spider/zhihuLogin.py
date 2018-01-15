@@ -6,7 +6,6 @@ def captcha(captcha_url):
 def zhihuLogin():
     session = requests.Session()
     headers = {'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
-
     url = "https://www.zhihu.com/#signin"
     html = session.get(url,headers = headers).text
     bs = BeautifulSoup(html,'lxml')

@@ -22,6 +22,7 @@ class zhihu_User():
         self.all_question_url = self.generate_url()
         print("%s 一共有 %s 页网页 " %(self.title,self.page_num))
         self.get_answer()
+        self.driver.quit()
         self.write_answer()
         self.download_image()
     def get_title(self):
@@ -111,9 +112,4 @@ def download(id,path):
 if __name__ == '__main__':
     # file save path
     path = "D:\\zhihu"
-    # zhihu question id
-    # example: url = 'https://www.zhihu.com/question/39284255'
-    # id = '39284255'
-    id = '54031744'
-    download(id,path)
-    download('41435689',path)
+    download('265565287',path)
