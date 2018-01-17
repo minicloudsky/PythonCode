@@ -16,8 +16,9 @@ class zhihu_User():
         self.page_num = 1
         self.answer = []
         self.image_list = []
-        self.driver = webdriver.PhantomJS()
+        self.driver = webdriver.Chrome()
         self.title = ""
+        self.login(self.driver)
         self.get_title()
         self.all_question_url = self.generate_url()
         print("%s 一共有 %s 页网页 " %(self.title,self.page_num))
@@ -25,9 +26,29 @@ class zhihu_User():
         self.driver.quit()
         self.write_answer()
         self.download_image()
+    def login(self, driver):
+        login_url = 'https://www.zhihu.com/'
+        # 点击使用密码登录
+        # driver.maximize_window()
+        driver.get(login_url)
+        # driver.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/div[1]/div[1]/div[2]/span').click()
+        # driver.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/form/div[1]/div[1]/input').send_keys(
+        #     self.username)
+        # driver.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/form/div[1]/div[2]/input').send_keys(
+        #     self.password)
+        # wait for the user to click capacha
+        # time.sleep(8)
+        # # 点击登录按钮
+        # driver.find_element_by_xpath('/html/body/div[1]/div/div[2]/div[2]/form/div[2]/button').click()
+        time.sleep(15)
+        print(driver.current_url)
+        print("登录知乎成功")
     def get_title(self):
         self.driver.get(self.question_url)
-        title = self.driver.find_element_by_xpath('//*[@id="root"]/div/main/div/div[1]/div[2]/div[1]/div[1]/h1').text
+        try:
+            title = self.driver.find_element_by_xpath('//*[@id="root"]/div/main/div/div[1]/div[2]/div[1]/div[1]/h1').text
+        except:
+            title="question"
         self.title = title
         print(title)
         if not os.path.exists(self.path+"\\"+self.title[:-1]):
@@ -37,7 +58,7 @@ class zhihu_User():
             self.page_num = num
         except:
             pass
-            self.page_num = 1
+            self.page_num = 16
         print(self.page_num)
     # 生成每个回答的 xpath
     def generate_xpath(self):
@@ -112,4 +133,5 @@ def download(id,path):
 if __name__ == '__main__':
     # file save path
     path = "D:\\zhihu"
-    download('265565287',path)
+    # download('63203562',path)
+    download('63203514',path)
