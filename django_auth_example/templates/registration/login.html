@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>登录</title>
+    <link rel="stylesheet" href="https://unpkg.com/mobi.css/dist/mobi.min.css">
+    <style>
+        .errorlist {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<div class="flex-center">
+    <div class="container">
+        <div class="flex-center">
+            <div class="unit-1-2 unit-1-on-mobile">
+                <h3>登录</h3>
+                <form class="form" action="{% url 'login' %}" method="post">
+                    {% csrf_token %}
+                    {{ form.non_field_errors }}
+                    {% for field in form %}
+                        {{ field.label_tag }}
+                        {{ field }}
+                        {{ field.errors }}
+                        {% if field.help_text %}
+                            <p class="help text-small text-muted">{{ field.help_text|safe }}</p>
+                        {% endif %}
+                    {% endfor %}
+                    <button type="submit" class="btn btn-primary btn-block">登录</button>
+{#                    在表单中增加了一个隐藏的 input 控件，其值为 {{ next }}，即之前通过 URL 参数传递给登录视图函数的，#}
+{#                    然后登录视图函数又将该值传递给了 login.html 模板。这样在整个登录流程中，#}
+{#                    始终有一个记录着用户在登录前页面 URL 的变量 next 在视图和模板间来回传递，知道用户登录成功后再跳转回 next 记录的页面 URL#}
+                    <input type="hidden" name="next" value="{{ next }}" />
+                </form>
+                <div class="flex-left top-gap text-small">
+                    <div class="unit-2-3"><span>没有账号？<a href="{% url 'users:register' %}?next={{ request.path }}">立即注册</a></span></div>
+                    <div class="unit-1-3 flex-right"><span><a href="{% url 'password_reset' %}">忘记密码？</a></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

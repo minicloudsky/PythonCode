@@ -134,4 +134,4 @@ if __name__ == '__main__':
     # file save path
     path = "D:\\zhihu"
     # download('63203562',path)
-    download('63203514',path)
+    download('20054811',path)

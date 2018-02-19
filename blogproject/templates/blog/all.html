@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{#在使用 Django 开发时，有时候我们需要在模板中按对象的某个属性分组显示一系列数据。例如博客文章按照时间归档分组显示#}
+{#文章列表（示例效果请看我的博客的归档页面），或者需要按日期分组显示通知（例如知乎）的通知列表。#}
+{#如果不熟悉 Django 内置的 regroup 模板标签，要完成这个需求可能还得费点功夫，而使用 regroup 则可以轻松完成任务。#}
+{#regroup 官方文档示例#}
+{#regroup 可以根据一个类列表对象中元素的某个属性对这些元素进行重新分组。例如有这样一个记录各个国家各个城市信息的列表：#}
+{#cities = [#}
+{#    {'name': 'Mumbai', 'population': '19,000,000', 'country': 'India'},#}
+{#    {'name': 'Calcutta', 'population': '15,000,000', 'country': 'India'},#}
+{#    {'name': 'New York', 'population': '20,000,000', 'country': 'USA'},#}
+{#    {'name': 'Chicago', 'population': '7,000,000', 'country': 'USA'},#}
+{#    {'name': 'Tokyo', 'population': '33,000,000', 'country': 'Japan'},#}
+{#]#}
+{#我们想按照国家分组显示各个国家的城市信息，效果就像这样：#}
+{#India#}
+{#Mumbai: 19,000,000#}
+{#Calcutta: 15,000,000#}
+{#USA#}
+{#New York: 20,000,000#}
+{#Chicago: 7,000,000#}
+{#Japan#}
+{#Tokyo: 33,000,000#}
+{#在模板中使用 regroup 模板标签就可以根据 country 属性对 cities 进行分组：#}
+{#{% regroup cities by country as country_list %}#}
+{#<ul>#}
+{#{% for country in country_list %}#}
+{#    <li>{{ country.grouper }}#}
+{#    <ul>#}
+{#        {% for city in country.list %}#}
+{#          <li>{{ city.name }}: {{ city.population }}</li>#}
+{#        {% endfor %}#}
+{#    </ul>#}
+{#    </li>#}
+{#{% endfor %}#}
+{#</ul>#}
+{#基本用法为 {% regroup 类列表对象 by 列表中元素的某个属性 as 模板变量 %}#}
+{#例如示例中根据 cities 列表中元素的 country 属性 regroup 了 cities，并通过 as 将分组后的结果保存到了#}
+{#country_list 模板变量中。#}
+{#然后可以循环这个分组后的列表。被循环的元素包含两个属性：#}
+{#grouper，就是分组依据的属性值，例如这里的 ‘India’、‘Japan’#}
+{#list，属于该组下原列表中元素#}
+{#博客文章按日期归档#}
+{#官方的例子是分组一个列表，且列表的元素是一个字典。但 regroup 不仅仅限于分组这样的数据结构，#}
+{#只要是一个类列表对象都可以分组，例如一个 QuerySet 对象。举一个博客文章例子，假设博客文章的 Model 定义如下：#}
+{#from django.db import models#}
+{#class Post(models.Model):#}
+{#    title = models.CharField(max_length=100)#}
+{#    pub_date = models.DatetimeField() # 文章发布时间#}
+{#现在要按照发布日期的年、月对文章进行分组显示，例如最开始给出的我的个人博客的归档页面示例，可以这样做：#}
+{#{% regroup post_list by created_time.year as year_post_group %}#}
+{#<ul>#}
+{#  {% for year in year_post_group %}#}
+{#  <li>{{ year.grouper }} 年#}
+{#    {% regroup year.list by created_time.month as month_post_group %}#}
+{#    <ul>#}
+{#      {% for month in month_post_group %}#}
+{#      <li>{{ month.grouper }} 月#}
+{#        <ul>#}
+{#          {% for post in month.list %}#}
+{#          <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a>#}
+{#          </li>#}
+{#          {% endfor %}#}
+{#        </ul>#}
+{#      </li>#}
+{#      {% endfor %}#}
+{#    </ul>#}
+{#  </li>#}
+{#  {% endfor %}#}
+{#</ul>#}
+{#假设模板中有一个包含 Post 列表的变量 post_list，先按照年份对其分组，然后循环显示这些年份，而在某个年份的循环中，#}
+{#又对该年份下的文章按照月份对其分组，然后循环显示该年中各个月份下的文章，这样就达到了一个日期归档的效果。#}
+{#只要分好组后，就可以任意控制模板显示的内容了，例如你不想循环显示全部文章标题，只想显示各个月份下的文章数量，#}
+{#稍微修改一下模板即可：#}
+{#{% regroup post_list by created_time.year as year_post_group %}#}
+{##}
+{#<ul>#}
+{#  {% for year in year_post_group %}#}
+{#  <li>{{ year.grouper }} 年#}
+{#    {% regroup year.list by created_time.month as month_post_group %}#}
+{#    <ul>#}
+{#      {% for month in month_post_group %}#}
+{#      <li>{{ month.grouper }} 月（month.list | length）</li>#}
+{#      {% endfor %}#}
+{#    </ul>#}
+{#  </li>#}
+{#  {% endfor %}#}
+{#</ul>#}
+{#注意这里使用 length 过滤器而不是使用 month.list.count 方法，因为 month.list 已经是不再是一个 QuerySet 对象。#}
+{#总结#}
+{#regroup 模板标签对于需要层级分组显示的对象十分有用。但有一点需要注意，被分组的对象一定要是已经有序排列的，#}
+{#否则 regroup 无法正确地分组。相信从以上两个示例中你可以很容易地总结出 regroup 模板标签的用法，从而用于自己的特定需求中，#}
+{#例如像知乎一样对用户每天的通知进行分组显示。#}
+
+{% block title %}
+    <title>文章归档</title>
+{% endblock title %}
+{% block main %}
+  <div class="unit-3-4 unit-1-on-mobile top-gap">
+    <div class="bg-white card px-7 py-5">
+      {% regroup post_list by created_time.year as year_post_group %}
+      <ul class="top-gap-0">
+        {% for year in year_post_group %}
+          <li>{{ year.grouper }} 年
+            {% regroup year.list by created_time.month as month_post_group %}
+            <ul class="mt-3">
+              {% for month in month_post_group %}
+                <li class="mt-3">{{ month.grouper }} 月{{ month.list|length }}日
+                  <ul>
+                    {% for post in month.list %}
+                      <li class="mt-3"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock main %}

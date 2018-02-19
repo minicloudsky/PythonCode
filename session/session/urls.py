@@ -19,16 +19,7 @@ from mysite import views
 import django_markdown
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^$',views.index),
-    # 前面接收数字，后面接收文字
-    url(r'^(\d+)/(\w+)/$',views.index),
-    url(r'^about/$',views.about),
-    url(r'^list/$',views.listing),
-    url(r'^get/$',views.get),
-    # post method
-    url(r'^post/$', views.post),
-    # contact
-    url(r'^contact/$',views.contact),
+    url(r'^home/$',views.home),
     url(r'^login/$',views.login),
 
 ]

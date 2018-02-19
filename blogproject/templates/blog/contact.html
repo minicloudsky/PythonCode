@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}
+    <title>联系博主</title>
+{% endblock title %}
+{% block main %}
+    <div class="col-md-9 col-md-offset-3 clean-superblock" id="contact">
+        {% if alert %}
+            <div class="alert-warning">
+                <label style="font-size: x-large;font-family: 'Microsoft YaHei UI'">{{ alert }}</label>
+            </div>
+        {% endif %}
+        <h2>Contact</h2>
+        <form action="/contact/" method="post" accept-charset="utf-8" class="contact-form">
+            {% csrf_token %}
+            <input type="text" name="name" id="contact-name" placeholder="Name" class="form-control input-lg">
+            <input type="email" name="email" id="contact-email" placeholder="Email" class="form-control input-lg">
+            <textarea rows="10" name="message" id="contact-body" placeholder="Your Message" class="form-control input-lg"></textarea>
+            <div class="buttons clearfix">
+                <button type="submit" class="btn btn-xlarge btn-clean-one" onclick="alert('提交成功,感谢您的宝贵意见!')">Submit</button>
+            </div>
+        </form>
+    </div>
+{% endblock main %}

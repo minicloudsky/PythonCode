@@ -10,7 +10,7 @@ class ContactForm(forms.Form):
         ['hz','杭州'],
         ['ly','洛阳'],
     ]
-    user_name = forms.CharField(label='你的姓名',max_length=50,initial='小小佳')
+    user_name = forms.CharField(label='你的姓名',max_length=50,initial='plus')
     user_city = forms.ChoiceField(label='居住城市',choices=CITY)
     user_school = forms.BooleanField(label='是否在学',required=False)
     user_email = forms.EmailField(label='电子邮件')

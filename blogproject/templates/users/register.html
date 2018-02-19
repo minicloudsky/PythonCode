@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link rel="stylesheet" href="https://unpkg.com/mobi.css/dist/mobi.min.css">
+<style>
+    .errorlist {
+        color: red;
+    }
+</style>
+{% block title %}
+    <title>注册</title>
+{% endblock title %}
+{% block main %}
+    <div class="flex-center">
+        <div class="container">
+            <div class="flex-center" style="line-height: 30px">
+                <div class="unit-1-2 unit-1-on-mobile" style="font-size: 20px;position:relative;left:15%;right:0;top:0;bottom:0;margin:auto;">
+                    <h3>注册</h3>
+                    <form class="form" action="{% url 'users:register' %}" method="post">
+                        {% csrf_token %}
+                        {% for field in form %}
+                            {{ field.label_tag }}
+                            <br>
+                            {{ field }}
+                            <br>
+                            {{ field.errors }}
+                            {% if field.help_text %}
+                                <p class="help text-large text-muted">{{ field.help_text|safe }}</p>
+                            {% endif %}
+                        {% endfor %}
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit"  class="btn btn-primary ">注册</button>
+                        <input type="hidden" name="next" value="{{ next }}"/>
+                    </form>
+                    <div class="flex-center top-gap text-small">
+                        <a href="{% url 'login' %}">已有账号登录</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock main %}
