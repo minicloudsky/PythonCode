@@ -32,7 +32,7 @@
     <section class="comment-area" id="comment-area">
         <hr>
         <h3>发表评论</h3>
-        <form action="{% url 'comments:post_comment'  post.pk %}" method="post" class="comment-form">
+        <form  action="{% url 'comments:post_comment'  post.pk %}" method="post" class="comment-form">
             {% csrf_token %}
             <div class="row">
                 <div class="col-md-4">
@@ -64,15 +64,21 @@
             <h3>评论列表，共 <span>{{ post.comment_set.count }}</span> 条评论</h3>
             <ul class="comment-list list-unstyled">
                 {% for comment in comment_list %}
-                <li class="comment-item">
-                    <span class="nickname">{{ comment.name }}</span>
-                    <time class="submit-date" >{{ comment.created_time }}</time>
-                    <div class="text">
-                        {{ comment.text }}
-                    </div>
-                </li>
+                    <li class="ui-icon-comment">
+                    <span class="ion-person" style="font-size: 40px"></span>
+                        <span class="nickname" style="color:lightcoral;font-size: 20px;">
+
+                            {{ comment.name }}&nbsp;<span class="ion-chatbox"></span>
+                          </span>
+
+                        <div class="text-info" style="font-size: 20px;">
+                            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>  {{ comment.text }}
+                        </div>
+                        <time class="submit-date" style="color: gray">{{ comment.created_time }}</time>
+                        <HR style="FILTER:alpha(opacity=100,finishopacity=0,style=1)" width="80%" color=#987cb9 SIZE=3>
+                    </li>
                 {% empty %}
-                暂无评论
+                    暂无评论
                 {% endfor %}
             </ul>
         </div>
