@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+{% load blog_tags %}
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Blog Home</title>
+
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}">
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'blog/vendor/bootstrap/css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'blog/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{% static 'blog/css/blog-home.css' %}" rel="stylesheet">
+    <!-- highlight -->
+    <style>
+        span.highlighted {
+            color: red;
+        }
+    </style>
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="{% url 'blog:index' %}">Clean Blog</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          {% block nav %}
+          {% endblock nav%}
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <div class="row">
+
+        {% block main %}
+        {% endblock main %}
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+          <!-- Search Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Search</h5>
+            <div class="card-body">
+              <form role="search" method="get" id="searchform" action="{% url 'haystack_search' %}">
+                <div class="input-group">
+                  <input type="search" name="q" class="form-control" placeholder="Search for...">
+                  <!--<span class="input-group-btn">-->
+                  <button class="btn btn-secondary" type="submit"><span class="ion-ios-search-strong">Go!</span></button>
+                  <!--</span>-->
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- Categories Widget -->
+          <div class="card my-4">
+            <h5 class="card-header">Category</h5>
+            <div class="card-body">
+              {% cate_list as c_list %}
+                <ul class="list-group">
+                  {% for cate in c_list %}
+                  <li class="list-group-item ">
+                    <a href="{% url 'blog:category' cate.pk %}">{{ cate.name }} <span class="badge label-primary">{{ cate.post_num }}</span></a>
+                  </li>
+                  {% empty %}
+                  not available
+                </ul>
+              {% endfor %}
+            </div>
+        </div>
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Clean Blog 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'blog/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'blog/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+
+
+  </body>
+
+</html>

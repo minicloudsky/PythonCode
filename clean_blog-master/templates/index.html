@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item active">
+    <a class="nav-link" href="{% url 'blog:index' %}">Home
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">About</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'blog:archives_page' %}">Archives</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'rss' %}">RSS</a>
+  </li>
+</ul>
+{% endblock nav %}
+
+
+{% block main %}
+<!-- Blog Entries Column -->
+<div class="col-md-8">
+
+  <h1 class="my-4">{% if title %}{{ title }}{% else %}Post List{% endif %}</h1>
+
+  {% if error_msg %}
+    <p>{{ error_msg }}</p>
+  {% endif %}
+
+  <!-- Blog Post -->
+  {% for post in post_list %}
+  <div class="card mb-4">
+    <!--<img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">-->
+    <div class="card-body">
+      <h2 class="card-title">{{ post.title }}</h2>
+      <p class="card-text">{{ post.summary }}</p>
+      <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+    </div>
+    <div class="card-footer text-muted">
+      发布于 {{ post.created_time }} by
+      <a href="#">{{ post.author }}</a>
+    </div>
+  </div>
+  {% empty %}
+  <div class="card mb-4">
+    <div class="card-body">
+      <h2 class="card-title">Not Available</h2>
+    </div>
+  </div>
+  {% endfor %}
+
+
+  <!-- Pagination -->
+
+  {% if is_paginated %}
+  <ul class="pagination justify-content-center mb-4">
+    {% if page_obj.has_previous %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ page_obj.previous_page_number }}">&larr; Older</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#">&larr; Older</a>
+    </li>
+    {% endif %}
+    {% if page_obj.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="?page={{ page_obj.next_page_number }}">Newer &rarr;</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#">Newer &rarr;</a>
+    </li>
+    {% endif %}
+  </ul>
+  {% endif %}
+
+</div>
+{% endblock main %}

@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load highlight %}
+{% block main %}
+
+<!-- Blog Entries Column -->
+<div class="col-md-8">
+{% if query %}
+
+  <h1 class="my-4">Search Result</h1>
+  <!-- Blog Post -->
+
+    {% for res in page.object_list %}
+      <div class="card mb-4">
+        <!--<img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">-->
+        <div class="card-body">
+          <h2 class="card-title">{% highlight res.object.title with query %}</h2>
+          <p class="card-text">{% highlight res.object.content with query max_length 40 %}</p>
+          <a href="{{ res.object.get_absolute_url }}" class="btn btn-primary">Read More &rarr;</a>
+        </div>
+        <div class="card-footer text-muted">
+          Posted on {{ res.object.created_time }} by
+          <a href="#">{{ res.object.author }}</a>
+        </div>
+      </div>
+    {% empty %}
+      <div class="card mb-4">
+        <div class="card-body">
+          <h2 class="card-title">Not Available</h2>
+        </div>
+      </div>
+    {% endfor %}
+
+
+
+
+  <!-- Pagination -->
+
+  {% if page.has_previous or page.has_next %}
+  <ul class="pagination justify-content-center mb-4">
+    {% if page.has_previous %}
+    <li class="page-item">
+      <a class="page-link" href="?q={{ query }}&amp;page={{ page.previous_page_number }}">&larr; Older</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#">&larr; Older</a>
+    </li>
+    {% endif %}
+    {% if page.has_next %}
+    <li class="page-item">
+      <a class="page-link" href="?q={{ query }}&amp;page={{ page.next_page_number }}">Newer &rarr;</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+      <a class="page-link" href="#">Newer &rarr;</a>
+    </li>
+    {% endif %}
+  </ul>
+  {% endif %}
+
+{% endif %}
+</div>
+
+{% endblock main %}

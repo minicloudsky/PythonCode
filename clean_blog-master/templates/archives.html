@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load blog_tags %}
+
+{% block nav %}
+<ul class="navbar-nav ml-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'blog:index' %}">Home
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">About</a>
+  </li>
+  <li class="nav-item active">
+    <a class="nav-link" href="{% url 'blog:archives_page' %}">Archives</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="{% url 'rss' %}">RSS</a>
+  </li>
+</ul>
+{% endblock nav %}
+
+{% block main %}
+<!-- Blog Entries Column -->
+<div class="col-md-8">
+
+  <h1 class="my-4">Archives</h1>
+
+  <!-- Blog Post -->
+  <ul class="list-group">
+    {% for date in date_list %}
+      <li class="list-group-item ">
+          <a href="{% url 'blog:archives' date.year date.month %}">{{ date.year }} 年 {{ date.month}} 月</a>
+      </li>
+    {% empty %}
+    <li class="list-group-item ">
+      Not Available
+    </li>
+    {% endfor %}
+    </ul>
+
+</div>
+{% endblock main %}
