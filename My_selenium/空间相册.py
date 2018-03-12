@@ -6,9 +6,9 @@ import requests,time,json
 import requests
 header = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
 img_list = []
-login_uin = '3013568147' #登录qq
-pwd = 'appijyw231870t;;' #登录密码
-album_uin = '935167163' #要读取相册的qq
+login_uin = '' #登录qq
+pwd = '' #登录密码
+album_uin = '' #要读取相册的qq
 s = requests.Session()
 #实例化出浏览器开始登录
 driver = webdriver.Chrome()
