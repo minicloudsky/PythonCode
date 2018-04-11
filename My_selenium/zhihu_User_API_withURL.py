@@ -236,9 +236,9 @@ if __name__ == '__main__':
     # 要爬取的用户id，比如我的是vajiajia
     user_id = 'li-xing-6-47'
     # 你的用户名
-    username = '15716302402'
+    username = ''
     # 你的知乎密码
-    password = 'jyw831392'
+    password = ''
     # 存储路径
     path = "D:\\zhihu"
     zhihu = zhihu_User(user_id,username,password,path)

@@ -14,6 +14,7 @@ driver.find_element_by_xpath('//a[@title="游戏壁纸"]').click()
 all_h = driver.window_handles
 driver.switch_to.window(all_h[1])
 time.sleep(3)
+os.mkdir("D://王者荣耀")
 os.chdir("D://王者荣耀")
 page_num = 0
 count = 0
