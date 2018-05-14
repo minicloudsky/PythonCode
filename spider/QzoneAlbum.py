@@ -2,9 +2,9 @@
 from selenium import webdriver
 import requests,time,json
 
-login_uin = '3013568147' #登录qq
-pwd = 'appijyw231870t;;' #登录密码
-album_uin = '935167163' #要读取相册的qq
+login_uin = '' #登录qq
+pwd = '' #登录密码
+album_uin = '' #要读取相册的qq
 
 s = requests.Session()
 
