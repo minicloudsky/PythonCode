@@ -3,17 +3,17 @@
 {% load humanize %}
 
 {% block breadcrumb %}
-  <li class="breadcrumb-item active">Boards</li>
+  <li class="breadcrumb-item active">灌水板块</li>
 {% endblock %}
 
 {% block content %}
   <table class="table">
     <thead class="thead-inverse">
       <tr>
-        <th>Board</th>
-        <th>Posts</th>
-        <th>Topics</th>
-        <th>Last Post</th>
+        <th>论坛</th>
+        <th>帖子</th>
+        <th>话题</th>
+        <th>最新发布</th>
       </tr>
     </thead>
     <tbody>
@@ -39,7 +39,7 @@
                 </small>
               {% else %}
                 <small class="text-muted">
-                  <em>No posts yet.</em>
+                  <em>暂无帖子</em>
                 </small>
               {% endif %}
             {% endwith %}

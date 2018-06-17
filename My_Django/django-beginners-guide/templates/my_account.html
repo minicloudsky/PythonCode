@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 
-{% block title %}My account{% endblock %}
+{% block title %}我的账号{% endblock %}
 
 {% block breadcrumb %}
-  <li class="breadcrumb-item active">My account</li>
+  <li class="breadcrumb-item active">我的账号</li>
 {% endblock %}
 
 {% block content %}
@@ -12,7 +12,7 @@
       <form method="post" novalidate>
         {% csrf_token %}
         {% include 'includes/form.html' %}
-        <button type="submit" class="btn btn-success">Save changes</button>
+        <button type="submit" class="btn btn-success">保存</button>
       </form>
     </div>
   </div>

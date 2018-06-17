@@ -5,7 +5,7 @@
 {% block title %}{{ topic.subject }}{% endblock %}
 
 {% block breadcrumb %}
-  <li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
+  <li class="breadcrumb-item"><a href="{% url 'home' %}">论坛</a></li>
   <li class="breadcrumb-item"><a href="{% url 'board_topics' topic.board.pk %}">{{ topic.board.name }}</a></li>
   <li class="breadcrumb-item active">{{ topic.subject }}</li>
 {% endblock %}
@@ -13,7 +13,7 @@
 {% block content %}
 
   <div class="mb-4">
-    <a href="{% url 'reply_topic' topic.board.pk topic.pk %}" class="btn btn-primary" role="button">Reply</a>
+    <a href="{% url 'reply_topic' topic.board.pk topic.pk %}" class="btn btn-primary" role="button">回复</a>
   </div>
 
   {% for post in posts %}
@@ -43,7 +43,7 @@
               <div class="mt-3">
                 <a href="{% url 'edit_post' post.topic.board.pk post.topic.pk post.pk %}"
                    class="btn btn-primary btn-sm"
-                   role="button">Edit</a>
+                   role="button">编辑</a>
               </div>
             {% endif %}
           </div>

@@ -2,7 +2,7 @@
 
 {% load static %}
 
-{% block title %}Edit post{% endblock %}
+{% block title %}编辑内容{% endblock %}
 
 {% block stylesheet %}
   <link rel="stylesheet" href="{% static 'css/simplemde.min.css' %}">
@@ -19,14 +19,14 @@
   <li class="breadcrumb-item"><a href="{% url 'home' %}">Boards</a></li>
   <li class="breadcrumb-item"><a href="{% url 'board_topics' post.topic.board.pk %}">{{ post.topic.board.name }}</a></li>
   <li class="breadcrumb-item"><a href="{% url 'topic_posts' post.topic.board.pk post.topic.pk %}">{{ post.topic.subject }}</a></li>
-  <li class="breadcrumb-item active">Edit post</li>
+  <li class="breadcrumb-item active">编辑帖子</li>
 {% endblock %}
 
 {% block content %}
   <form method="post" class="mb-4" novalidate>
     {% csrf_token %}
     {% include 'includes/form.html' %}
-    <button type="submit" class="btn btn-success">Save changes</button>
+    <button type="submit" class="btn btn-success">保存</button>
     <a href="{% url 'topic_posts' post.topic.board.pk post.topic.pk %}" class="btn btn-outline-secondary" role="button">Cancel</a>
   </form>
 {% endblock %}
