@@ -56,7 +56,7 @@ class Douban_Movie():
         self.data = {}
         self.value = []
         self.get_json()
-        self.mongo()
+        #self.mongo()
         self.download_cover()
     def generate_url(self,tag,sort,page_limit,page_start):
         url_list = []
