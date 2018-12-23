@@ -5,20 +5,25 @@ import re
 url = 'https://weibo.com/'
 username = ''
 password = ''
-image = randint(1,650)
 list = [""" #随手赚钱# """, """ #掌赚宝-手机赚钱# """, """ #微博赚钱季# """, """ #躺着赚钱,卧床不起# """,
 """ #宝妈赚钱# """, """ #学生赚钱# """]
-text = """ #王思聪# #支付宝# 王思聪发一亿支付宝大红包，打开支付宝首页搜索 4338455,瓜分王思聪1亿红包，先到先得."""
-
+text = """ #王思聪# #支付宝# 王思聪发15亿支付宝大红包，打开支付宝首页搜索 4338455,瓜分王思聪15亿红包，先到先得."""
 result = []
 for i in range(1):
     result.append(choice(list))
-
 message = "".join(set(result))
 message = message + text
-driver = webdriver.Chrome()
+options = webdriver.ChromeOptions()
+prefs = {
+    'profile.default_content_setting_values':
+        {
+            'notifications': 2
+        }
+}
+options.add_experimental_option('prefs', prefs)
+driver = webdriver.Chrome(chrome_options=options)
 driver.get(url)
-time.sleep(30)
+time.sleep(10)
 driver.find_element_by_id('loginname').send_keys(username)
 driver.find_element_by_xpath('//*[@id="pl_login_form"]/div/div[3]/div[2]/div/input').send_keys(password)
 time.sleep(2)
@@ -39,7 +44,7 @@ driver.find_element_by_xpath('//*[@id="v6_pl_content_publishertop"]/div/div[2]/t
 time.sleep(3)
 #driver.find_element_by_name('pic1').send_keys("D:\\pycharm\\PythonCode\\commercial_spider\\votebar\\1.png")
 #time.sleep(3)
-driver.find_element_by_name('pic1').send_keys("D:\\image\\{}.jpeg".format(str(image)))
+driver.find_element_by_name('pic1').send_keys("D:\\pycharm\\PythonCode\\commercial_spider\\money\\88.jpg")
 driver.find_element_by_name('pic1').send_keys("D:\\pycharm\\PythonCode\\commercial_spider\\votebar\\alipay.png")
 time.sleep(3)
 driver.find_element_by_xpath('//*[@id="v6_pl_content_publishertop"]/div/div[3]/div[1]/a').click()

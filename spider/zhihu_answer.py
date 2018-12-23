@@ -40,6 +40,6 @@ def get_answer(num,question_id):
     for i in answer:
         print(i)
 if __name__ == '__main__':
-    question_id = "65532647"
-    page_num = 20
+    question_id = "276648130"
+    page_num = 6200
     get_answer(page_num,question_id)

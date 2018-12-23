@@ -158,5 +158,11 @@ if __name__ == '__main__':
     # file save path
     path = "D:\\zhihu"
     # queue = ['22052038','27006591']
-    download('22052038', path,116 )
-    download('27006591',path,337)
+    #download('22052038', path,116 )
+    #download('276648130',path,658)
+    download('301141036',path,32)
+    download('277065947',path,180)
+    download('276648130',path,658)
+    download('23684594',path,535)
+    download('39930303',path,260)
+    download('301141036',path,33)
