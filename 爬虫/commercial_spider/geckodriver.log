@@ -1,0 +1,174 @@
+1546849829174	geckodriver	INFO	geckodriver 0.20.1
+1546849829194	geckodriver	INFO	Listening on 127.0.0.1:58143
+1546849832278	mozrunner::runner	INFO	Running command: "D:\\2345pic\\firefox.exe" "-marionette" "-profile" "C:\\Users\\plus\\AppData\\Local\\Temp\\rust_mozprofile.9SEVsbbeoyaE"
+1546849833492	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1546849833492	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1546849833733	Marionette	DEBUG	Received observer notification profile-after-change
+1546849834059	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546849834125	Marionette	DEBUG	Received observer notification command-line-startup
+1546849834126	Marionette	DEBUG	Received observer notification nsPref:changed
+1546849834126	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1546849834304	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546849837680	Marionette	DEBUG	Received observer notification sessionstore-windows-restored
+1546849837681	Marionette	DEBUG	Waiting for delayed startup...
+1546849837822	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1546849837822	Marionette	DEBUG	Setting recommended pref security.turn_off_all_security_so_that_viruses_can_take_over_this_computer to true
+1546849837823	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1546849837823	Marionette	DEBUG	Setting recommended pref browser.newtabpage.enabled to false
+1546849837824	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1546849837825	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1546849837825	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1546849838367	Marionette	INFO	Listening on port 58157
+1546849838367	Marionette	DEBUG	Remote service is active
+1546849838529	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:58179
+1546849838546	Marionette	TRACE	0 -> [0,1,"newSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1546849838547	Marionette	TRACE	0 <- [1,1,{"error":"unknown command","message":"newSession","stacktrace":"WebDriverError@chrome://marionette/content/error.js:178: ... et@chrome://marionette/content/server.js:236:8\n_onJSONObjectReady/<@chrome://marionette/content/transport.js:490:9\n"},null]
+1546849880368	geckodriver	INFO	geckodriver 0.20.1
+1546849880375	geckodriver	INFO	Listening on 127.0.0.1:58254
+1546849883411	mozrunner::runner	INFO	Running command: "D:\\2345pic\\firefox.exe" "-marionette" "-profile" "C:\\Users\\plus\\AppData\\Local\\Temp\\rust_mozprofile.aneM3Ro77pVy"
+1546849884186	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1546849884186	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1546849884465	Marionette	DEBUG	Received observer notification profile-after-change
+1546849884774	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546849884814	Marionette	DEBUG	Received observer notification command-line-startup
+1546849884814	Marionette	DEBUG	Received observer notification nsPref:changed
+1546849884814	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1546849884952	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546849888060	Marionette	DEBUG	Received observer notification sessionstore-windows-restored
+1546849888060	Marionette	DEBUG	Waiting for delayed startup...
+1546849888174	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1546849888175	Marionette	DEBUG	Setting recommended pref security.turn_off_all_security_so_that_viruses_can_take_over_this_computer to true
+1546849888176	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1546849888176	Marionette	DEBUG	Setting recommended pref browser.newtabpage.enabled to false
+1546849888178	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1546849888178	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1546849888179	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1546849888271	Marionette	INFO	Listening on port 58269
+1546849888272	Marionette	DEBUG	Remote service is active
+1546849888718	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:58293
+1546849888720	Marionette	TRACE	0 -> [0,1,"newSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1546849888721	Marionette	TRACE	0 <- [1,1,{"error":"unknown command","message":"newSession","stacktrace":"WebDriverError@chrome://marionette/content/error.js:178: ... et@chrome://marionette/content/server.js:236:8\n_onJSONObjectReady/<@chrome://marionette/content/transport.js:490:9\n"},null]
+1546849990152	geckodriver	INFO	geckodriver 0.20.1
+1546849990161	geckodriver	INFO	Listening on 127.0.0.1:58544
+1546849993220	mozrunner::runner	INFO	Running command: "D:\\2345pic\\firefox.exe" "-marionette" "-profile" "C:\\Users\\plus\\AppData\\Local\\Temp\\rust_mozprofile.BrbZCalIkAxE"
+1546849993994	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1546849993994	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1546849994203	Marionette	DEBUG	Received observer notification profile-after-change
+1546849994529	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546849994582	Marionette	DEBUG	Received observer notification command-line-startup
+1546849994582	Marionette	DEBUG	Received observer notification nsPref:changed
+1546849994582	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1546849994712	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546849997881	Marionette	DEBUG	Received observer notification sessionstore-windows-restored
+1546849997882	Marionette	DEBUG	Waiting for delayed startup...
+1546849998070	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1546849998070	Marionette	DEBUG	Setting recommended pref security.turn_off_all_security_so_that_viruses_can_take_over_this_computer to true
+1546849998070	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1546849998071	Marionette	DEBUG	Setting recommended pref browser.newtabpage.enabled to false
+1546849998072	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1546849998072	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1546849998073	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1546849998131	Marionette	INFO	Listening on port 58556
+1546849998132	Marionette	DEBUG	Remote service is active
+1546849998538	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:58582
+1546849998541	Marionette	TRACE	0 -> [0,1,"newSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1546849998541	Marionette	TRACE	0 <- [1,1,{"error":"unknown command","message":"newSession","stacktrace":"WebDriverError@chrome://marionette/content/error.js:178: ... et@chrome://marionette/content/server.js:236:8\n_onJSONObjectReady/<@chrome://marionette/content/transport.js:490:9\n"},null]
+1546850057357	geckodriver	INFO	geckodriver 0.20.1
+1546850057373	geckodriver	INFO	Listening on 127.0.0.1:58802
+1546850060402	mozrunner::runner	INFO	Running command: "D:\\2345pic\\firefox.exe" "-marionette" "-profile" "C:\\Users\\plus\\AppData\\Local\\Temp\\rust_mozprofile.6oKXdenhZowp"
+1546850061097	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1546850061097	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1546850061306	Marionette	DEBUG	Received observer notification profile-after-change
+1546850061615	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546850061658	Marionette	DEBUG	Received observer notification command-line-startup
+1546850061659	Marionette	DEBUG	Received observer notification nsPref:changed
+1546850061659	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1546850061805	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546850064955	Marionette	DEBUG	Received observer notification sessionstore-windows-restored
+1546850064956	Marionette	DEBUG	Waiting for delayed startup...
+1546850065076	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1546850065077	Marionette	DEBUG	Setting recommended pref security.turn_off_all_security_so_that_viruses_can_take_over_this_computer to true
+1546850065077	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1546850065078	Marionette	DEBUG	Setting recommended pref browser.newtabpage.enabled to false
+1546850065079	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1546850065079	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1546850065080	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1546850065142	Marionette	INFO	Listening on port 58814
+1546850065143	Marionette	DEBUG	Remote service is active
+1546850065688	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:58841
+1546850065690	Marionette	TRACE	0 -> [0,1,"newSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1546850065690	Marionette	TRACE	0 <- [1,1,{"error":"unknown command","message":"newSession","stacktrace":"WebDriverError@chrome://marionette/content/error.js:178: ... et@chrome://marionette/content/server.js:236:8\n_onJSONObjectReady/<@chrome://marionette/content/transport.js:490:9\n"},null]
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1546856514975	geckodriver	INFO	geckodriver 0.20.1
+1546856514991	geckodriver	INFO	Listening on 127.0.0.1:51953
+1546856518020	mozrunner::runner	INFO	Running command: "D:\\2345pic\\firefox.exe" "-marionette" "-profile" "C:\\Users\\plus\\AppData\\Local\\Temp\\rust_mozprofile.p1wrPNtLMhgE"
+1546856520372	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1546856520373	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1546856520611	Marionette	DEBUG	Received observer notification profile-after-change
+1546856521019	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546856521077	Marionette	DEBUG	Received observer notification command-line-startup
+1546856521078	Marionette	DEBUG	Received observer notification nsPref:changed
+1546856521078	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1546856521215	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546856524359	Marionette	DEBUG	Received observer notification sessionstore-windows-restored
+1546856524360	Marionette	DEBUG	Waiting for delayed startup...
+1546856524474	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1546856524475	Marionette	DEBUG	Setting recommended pref security.turn_off_all_security_so_that_viruses_can_take_over_this_computer to true
+1546856524476	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1546856524476	Marionette	DEBUG	Setting recommended pref browser.newtabpage.enabled to false
+1546856524477	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1546856524478	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1546856524478	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1546856524534	Marionette	INFO	Listening on port 51965
+1546856524535	Marionette	DEBUG	Remote service is active
+1546856525561	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:51996
+1546856525562	Marionette	TRACE	0 -> [0,1,"newSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1546856525563	Marionette	TRACE	0 <- [1,1,{"error":"unknown command","message":"newSession","stacktrace":"WebDriverError@chrome://marionette/content/error.js:178: ... et@chrome://marionette/content/server.js:236:8\n_onJSONObjectReady/<@chrome://marionette/content/transport.js:490:9\n"},null]
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
+1546861628646	geckodriver	INFO	geckodriver 0.20.1
+1546861628662	geckodriver	INFO	Listening on 127.0.0.1:60486
+1546861631707	mozrunner::runner	INFO	Running command: "D:\\2345pic\\firefox.exe" "-marionette" "-profile" "C:\\Users\\plus\\AppData\\Local\\Temp\\rust_mozprofile.xyJszkOapUKC"
+1546861633029	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: resource://pdf.js/
+1546861633029	addons.webextension.screenshots@mozilla.org	WARN	Loading extension 'screenshots@mozilla.org': Reading manifest: Invalid host permission: about:reader*
+1546861633247	Marionette	DEBUG	Received observer notification profile-after-change
+1546861633663	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546861633713	Marionette	DEBUG	Received observer notification command-line-startup
+1546861633713	Marionette	DEBUG	Received observer notification nsPref:changed
+1546861633714	Marionette	DEBUG	Init aborted (running=false, enabled=true, finalUIStartup=false)
+1546861633891	Marionette	DEBUG	Received observer notification toplevel-window-ready
+1546861636870	Marionette	DEBUG	Received observer notification sessionstore-windows-restored
+1546861636870	Marionette	DEBUG	Waiting for delayed startup...
+1546861637052	Marionette	DEBUG	Setting recommended pref app.update.disabledForTesting to true
+1546861637053	Marionette	DEBUG	Setting recommended pref security.turn_off_all_security_so_that_viruses_can_take_over_this_computer to true
+1546861637053	Marionette	DEBUG	Setting recommended pref browser.contentblocking.introCount to 99
+1546861637053	Marionette	DEBUG	Setting recommended pref browser.newtabpage.enabled to false
+1546861637054	Marionette	DEBUG	Setting recommended pref datareporting.policy.dataSubmissionPolicyAccepted to false
+1546861637054	Marionette	DEBUG	Setting recommended pref dom.disable_beforeunload to true
+1546861637055	Marionette	DEBUG	Setting recommended pref toolkit.cosmeticAnimations.enabled to false
+1546861637138	Marionette	INFO	Listening on port 60499
+1546861637139	Marionette	DEBUG	Remote service is active
+1546861637606	Marionette	DEBUG	Accepted connection 0 from 127.0.0.1:60524
+1546861637608	Marionette	TRACE	0 -> [0,1,"newSession",{"acceptInsecureCerts":true,"browserName":"firefox","capabilities":{"desiredCapabilities":{"acceptInsecureCerts":true,"browserName":"firefox"}}}]
+1546861637609	Marionette	TRACE	0 <- [1,1,{"error":"unknown command","message":"newSession","stacktrace":"WebDriverError@chrome://marionette/content/error.js:178: ... et@chrome://marionette/content/server.js:236:8\n_onJSONObjectReady/<@chrome://marionette/content/transport.js:490:9\n"},null]
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: NetworkError when attempting to fetch resource..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:750:13
+
