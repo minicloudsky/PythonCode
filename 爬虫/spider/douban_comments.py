@@ -234,9 +234,12 @@ class DoubanMovie:
         with open(self.path+"\\{}".format(self.movie_name) + "\\long_comments.txt", 'w', encoding='utf-8') as f:
             f.write(s)
         f.close()
-        self.short_comment_data = {'short_comments': self.short_comment,'short_comments_votes' : self.votes,'long_comments':self.long_comments}
+        self.short_comment_data = {'short_comments': self.short_comment,'short_comments_votes' : self.votes}
         frame = DataFrame(self.short_comment_data)
-        frame.to_excel(self.path+"\\{}".format(self.movie_name) + '\\' + self.movie_name + '.xls', index=True)
+        frame.to_excel(self.path+"\\{}".format(self.movie_name) + '\\' + self.movie_name + '_short_comments.xls', index=True)
+        data = {'long_comments': self.long_comments}
+        frame = DataFrame(data)
+        frame.to_excel(self.path + "\\{}".format(self.movie_name) + '\\' + self.movie_name + '_long_comments.xls', index=True)
         print("下载长评论文章配图,一共有 {} 张图片".format(len(self.long_img_url)))
         count = 0
         for url in self.long_img_url:
