@@ -10,34 +10,60 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/spider$My_json.coverage" NAME="My_json Coverage Results" MODIFIED="1508214742898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$PEXELS_ajax_2.coverage" NAME="PEXELS_ajax_2 Coverage Results" MODIFIED="1505800573926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$douban_comments.coverage" NAME="douban_comments Coverage Results" MODIFIED="1507957127458" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$.coverage" NAME="当一个颜值很高的程序媛是怎样的体验 Coverage Results" MODIFIED="1509760565983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$zhihuapi.coverage" NAME="zhihuapi Coverage Results" MODIFIED="1506602605228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$zhihuLogin.coverage" NAME="zhihuLogin Coverage Results" MODIFIED="1508229280286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$PEXELS_ajax.coverage" NAME="PEXELS_ajax Coverage Results" MODIFIED="1505384852878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$weixinimage.coverage" NAME="weixinimage Coverage Results" MODIFIED="1507961220613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$weibo_scrapy.coverage" NAME="weibo_scrapy Coverage Results" MODIFIED="1504939720830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spider$kanqingzi.coverage" NAME="kanqingzi Coverage Results" MODIFIED="1506764467325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$getweixinbeizhu.coverage" NAME="getweixinbeizhu Coverage Results" MODIFIED="1507964271737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$my_selenium.coverage" NAME="my_selenium Coverage Results" MODIFIED="1506470166861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spider$My_SeleniumTest.coverage" NAME="My_SeleniumTest Coverage Results" MODIFIED="1508237701704" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$gui.coverage" NAME="gui Coverage Results" MODIFIED="1505797668647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$My_json.coverage" NAME="My_json Coverage Results" MODIFIED="1508214742898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$weibo_spider.coverage" NAME="weibo_spider Coverage Results" MODIFIED="1504938108797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$douban_comments.coverage" NAME="douban_comments Coverage Results" MODIFIED="1547882327661" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$zhihuLogin.coverage" NAME="zhihuLogin Coverage Results" MODIFIED="1508229280286" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$weibo_scrapy.coverage" NAME="weibo_scrapy Coverage Results" MODIFIED="1504939720830" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$zhihuapi.coverage" NAME="zhihuapi Coverage Results" MODIFIED="1506602605228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$my_selenium.coverage" NAME="my_selenium Coverage Results" MODIFIED="1506470166861" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spider$test_pexels.coverage" NAME="test_pexels Coverage Results" MODIFIED="1505019016250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$zhihuspider.coverage" NAME="zhihuspider Coverage Results" MODIFIED="1506760215321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$launch.coverage" NAME="launch Coverage Results" MODIFIED="1506926504039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/SinaSpider-master/Sina_spider3" />
-    <SUITE FILE_PATH="coverage/spider$wx.coverage" NAME="wx Coverage Results" MODIFIED="1507963475753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$gui.coverage" NAME="gui Coverage Results" MODIFIED="1505797668647" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spider$douban_spider.coverage" NAME="douban_spider Coverage Results" MODIFIED="1506593553025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$txt.coverage" NAME="txt Coverage Results" MODIFIED="1506592301819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spider$toutiao.coverage" NAME="toutiao Coverage Results" MODIFIED="1507104965957" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$weixin.coverage" NAME="weixin Coverage Results" MODIFIED="1507963519517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$wx.coverage" NAME="wx Coverage Results" MODIFIED="1507963475753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$launch.coverage" NAME="launch Coverage Results" MODIFIED="1506926504039" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$USER_HOME$/Downloads/SinaSpider-master/Sina_spider3" />
+    <SUITE FILE_PATH="coverage/spider$getweixinbeizhu.coverage" NAME="getweixinbeizhu Coverage Results" MODIFIED="1507964271737" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$.coverage" NAME="当一个颜值很高的程序媛是怎样的体验 Coverage Results" MODIFIED="1509760565983" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$zhihuspider.coverage" NAME="zhihuspider Coverage Results" MODIFIED="1506760215321" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$PEXELS_ajax_2.coverage" NAME="PEXELS_ajax_2 Coverage Results" MODIFIED="1505800573926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$weixinimage.coverage" NAME="weixinimage Coverage Results" MODIFIED="1507961220613" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$txt.coverage" NAME="txt Coverage Results" MODIFIED="1506592301819" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/spider$PEXELS_ajax.coverage" NAME="PEXELS_ajax Coverage Results" MODIFIED="1505384852878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spider$pop_same_list.coverage" NAME="pop_same_list Coverage Results" MODIFIED="1506586668901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/spider$API.coverage" NAME="知乎API Coverage Results" MODIFIED="1506603634654" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.idea" />
-    <SUITE FILE_PATH="coverage/spider$weixin.coverage" NAME="weixin Coverage Results" MODIFIED="1507963519517" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/spider$weibo_spider.coverage" NAME="weibo_spider Coverage Results" MODIFIED="1504938108797" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file leaf-file-name="douban_comments.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/douban_comments.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="216" column="78" lean-forward="true" selection-start-line="216" selection-start-column="78" selection-end-line="216" selection-end-column="78" />
+              <folding>
+                <element signature="e#16#31#0" expanded="true" />
+                <element signature="e#1870#2377#0" expanded="false" />
+                <element signature="e#2436#2835#0" expanded="false" />
+                <element signature="e#2874#3189#0" expanded="false" />
+                <element signature="e#3227#3545#0" expanded="false" />
+                <element signature="e#3582#3898#0" expanded="false" />
+                <element signature="e#3954#4321#0" expanded="false" />
+                <element signature="e#4374#4680#0" expanded="false" />
+                <element signature="e#4731#5047#0" expanded="false" />
+                <element signature="e#5097#5350#0" expanded="false" />
+                <element signature="e#5408#6325#0" expanded="false" />
+                <element signature="e#6364#6634#0" expanded="false" />
+                <element signature="e#6674#6958#0" expanded="false" />
+                <element signature="e#9145#9562#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -51,10 +77,12 @@
       <find>tab</find>
       <find>//*[@id=&quot;interest_sectl&quot;]/div[1]/div[2]/div/div[2]/a/span</find>
       <find>\n</find>
+      <find>看过</find>
+      <find>https://movie.douban.com/subject/</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -77,7 +105,6 @@
         <option value="$PROJECT_DIR$/python project.py" />
         <option value="$USER_HOME$/Downloads/SinaSpider-master/Sina_spider3/launch.py" />
         <option value="$PROJECT_DIR$/toutiao.py" />
-        <option value="$PROJECT_DIR$/douban_comments.py" />
         <option value="$PROJECT_DIR$/weixinimage.py" />
         <option value="$PROJECT_DIR$/wx.py" />
         <option value="$PROJECT_DIR$/weixin.py" />
@@ -88,6 +115,7 @@
         <option value="$PROJECT_DIR$/常用user-agent.py" />
         <option value="$PROJECT_DIR$/My_SeleniumTest.py" />
         <option value="$PROJECT_DIR$/当一个颜值很高的程序媛是怎样的体验.py" />
+        <option value="$PROJECT_DIR$/douban_comments.py" />
       </list>
     </option>
   </component>
@@ -98,10 +126,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="597" />
-    <option name="y" value="358" />
+    <option name="x" value="178" />
+    <option name="y" value="251" />
     <option name="width" value="825" />
-    <option name="height" value="867" />
+    <option name="height" value="788" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -123,7 +151,7 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../datas" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
@@ -139,7 +167,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.当一个颜值很高的程序媛是怎样的体验">
+  <component name="RunManager" selected="Python.douban_comments">
     <configuration name="当一个颜值很高的程序媛是怎样的体验" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -194,7 +222,7 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="getweixinbeizhu" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="douban_comments" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
@@ -207,7 +235,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="spider" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/getweixinbeizhu.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/douban_comments.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -231,19 +259,19 @@
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.getweixinbeizhu" />
-      <item index="1" class="java.lang.String" itemvalue="Python.zhihuLogin" />
-      <item index="2" class="java.lang.String" itemvalue="Python.My_json" />
-      <item index="3" class="java.lang.String" itemvalue="Python.My_SeleniumTest" />
-      <item index="4" class="java.lang.String" itemvalue="Python.当一个颜值很高的程序媛是怎样的体验" />
+      <item index="0" class="java.lang.String" itemvalue="Python.zhihuLogin" />
+      <item index="1" class="java.lang.String" itemvalue="Python.My_json" />
+      <item index="2" class="java.lang.String" itemvalue="Python.My_SeleniumTest" />
+      <item index="3" class="java.lang.String" itemvalue="Python.当一个颜值很高的程序媛是怎样的体验" />
+      <item index="4" class="java.lang.String" itemvalue="Python.douban_comments" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.当一个颜值很高的程序媛是怎样的体验" />
-        <item index="1" class="java.lang.String" itemvalue="Python.My_SeleniumTest" />
-        <item index="2" class="java.lang.String" itemvalue="Python.zhihuLogin" />
-        <item index="3" class="java.lang.String" itemvalue="Python.My_json" />
-        <item index="4" class="java.lang.String" itemvalue="Python.getweixinbeizhu" />
+        <item index="0" class="java.lang.String" itemvalue="Python.douban_comments" />
+        <item index="1" class="java.lang.String" itemvalue="Python.当一个颜值很高的程序媛是怎样的体验" />
+        <item index="2" class="java.lang.String" itemvalue="Python.My_SeleniumTest" />
+        <item index="3" class="java.lang.String" itemvalue="Python.zhihuLogin" />
+        <item index="4" class="java.lang.String" itemvalue="Python.My_json" />
       </list>
     </recent_temporary>
   </component>
@@ -264,13 +292,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939634" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6417323" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6277955" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -295,7 +324,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="11" />
+      <option name="time" value="12" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -315,21 +344,9 @@
     <entry file="file://$PROJECT_DIR$/PEXELS_ajax_2.py" />
     <entry file="file://$PROJECT_DIR$/PEXELS_ajax_2.py" />
     <entry file="file://$PROJECT_DIR$/PEXELS_ajax.py" />
-    <entry file="file://$PROJECT_DIR$/test_pexels.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_pexels.py" />
     <entry file="file://$PROJECT_DIR$/PEXELS_ajax.py" />
-    <entry file="file://$PROJECT_DIR$/test_pexels.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="8" column="21" lean-forward="true" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_pexels.py" />
     <entry file="file://$PROJECT_DIR$/weibo_spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -344,13 +361,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weibo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/weibo.py" />
     <entry file="file://$PROJECT_DIR$/weibo_scrapy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -365,35 +376,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../../python35/Lib/site-packages/requests/api.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="70" column="0" lean-forward="false" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../python35/Lib/site-packages/requests/api.py" />
     <entry file="file://$PROJECT_DIR$/PEXELS_ajax.py" />
-    <entry file="file://$PROJECT_DIR$/test_pexels.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-919">
-          <caret line="15" column="4127" lean-forward="false" selection-start-line="15" selection-start-column="4127" selection-end-line="15" selection-end-column="4127" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://E:/BaiduNetdiskDownload/数据结构-六种排序/gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1050">
-          <caret line="22" column="57" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gui.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test_pexels.py" />
+    <entry file="file://E:/BaiduNetdiskDownload/数据结构-六种排序/gui.py" />
+    <entry file="file://$PROJECT_DIR$/gui.py" />
     <entry file="file://$PROJECT_DIR$/PEXELS_ajax_2.py" />
     <entry file="file://$PROJECT_DIR$/my_selenium.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -402,13 +389,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/txt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3360">
-          <caret line="119" column="60" lean-forward="false" selection-start-line="119" selection-start-column="60" selection-end-line="119" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/txt.py" />
     <entry file="file://$PROJECT_DIR$/douban_spider.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1013">
@@ -416,13 +397,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pop_same_list.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="14" lean-forward="false" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pop_same_list.py" />
     <entry file="file://$PROJECT_DIR$/zhihuapi.py" />
     <entry file="file://$PROJECT_DIR$/.idea/知乎API.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -431,29 +406,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/baiduspider (2).py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/baiduspider (2).py" />
     <entry file="file://$PROJECT_DIR$/zhihuspider.py" />
-    <entry file="file://$PROJECT_DIR$/kanqingzi.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/kanqingzi.py" />
     <entry file="file://$USER_HOME$/Downloads/SinaSpider-master/Sina_spider3/launch.py" />
-    <entry file="file://$PROJECT_DIR$/../../../python35/Lib/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../../python35/Lib/re.py" />
     <entry file="file://$PROJECT_DIR$/toutiao.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -461,20 +418,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/python project.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/douban_comments.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="199" column="27" lean-forward="true" selection-start-line="199" selection-start-column="27" selection-end-line="199" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/python project.py" />
     <entry file="file://$PROJECT_DIR$/user-agent" />
     <entry file="file://$PROJECT_DIR$/Python-六种排序.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -515,21 +459,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/user-agent.py" />
     <entry file="file://$PROJECT_DIR$/常用user-agent.py" />
-    <entry file="file://$PROJECT_DIR$/当一个颜值很高的程序媛是怎样的体验.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="19" column="30" lean-forward="false" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/当一个颜值很高的程序媛是怎样的体验.py" />
     <entry file="file://$PROJECT_DIR$/My_SeleniumTest.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#18#33#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -537,18 +471,29 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="17" column="18" lean-forward="false" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-          <folding>
-            <element signature="e#15#26#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/zhihuLogin.py">
+    <entry file="file://$PROJECT_DIR$/zhihuLogin.py" />
+    <entry file="file://$PROJECT_DIR$/douban_comments.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="50" lean-forward="false" selection-start-line="10" selection-start-column="50" selection-end-line="10" selection-end-column="50" />
+        <state relative-caret-position="270">
+          <caret line="216" column="78" lean-forward="true" selection-start-line="216" selection-start-column="78" selection-end-line="216" selection-end-column="78" />
           <folding>
-            <element signature="e#16#45#0" expanded="true" />
+            <element signature="e#16#31#0" expanded="true" />
+            <element signature="e#1870#2377#0" expanded="false" />
+            <element signature="e#2436#2835#0" expanded="false" />
+            <element signature="e#2874#3189#0" expanded="false" />
+            <element signature="e#3227#3545#0" expanded="false" />
+            <element signature="e#3582#3898#0" expanded="false" />
+            <element signature="e#3954#4321#0" expanded="false" />
+            <element signature="e#4374#4680#0" expanded="false" />
+            <element signature="e#4731#5047#0" expanded="false" />
+            <element signature="e#5097#5350#0" expanded="false" />
+            <element signature="e#5408#6325#0" expanded="false" />
+            <element signature="e#6364#6634#0" expanded="false" />
+            <element signature="e#6674#6958#0" expanded="false" />
+            <element signature="e#9145#9562#0" expanded="false" />
           </folding>
         </state>
       </provider>

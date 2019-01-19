@@ -1,18 +1,21 @@
 # coding: utf-8
 import requests
 import re
+from urllib.parse import quote
 import os
 import codecs
+from pandas import DataFrame
 from lxml import etree
 header = {'accept-encoding':'gzip, deflate, br',
     'accept-language':'zh-CN,zh;q=0.8',
     'user-agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/61.0.3163.100 Safari/537.36'}
+
+
 class DoubanMovie:
-    def __init__(self,movie_id,movie_page,comments_path):
+    def __init__(self, movie_id , comments_path):
         self.movie_id = movie_id
         self.movie_index = 'https://movie.douban.com/subject/'+str(self.movie_id)
         self.all_comments = []
-        self.movie_page = movie_page
         self.path = comments_path
         self.movie_name = ""
         self.movie_degree = 0
@@ -23,32 +26,53 @@ class DoubanMovie:
         self.director = ""
         self.play_time = ""
         self.movie_type = ""
-        self.short_comment_person_num = 0
+        self.short_comment_data = {}
+        self.short_comment = []
+        # 觉得短评有用的投票数量
+        self.votes = []
+        self.long_comments = []
+        self.short_comment_num = 0
+        self.long_comments_num = 0
+        self.long_comments_id = []
+        # 长评论支持和反对的人数
+        self.long_approve = []
+        self.long_against = []
         self.movie_time = 0
         self.better_than =""
         self.response = requests.get(self.movie_index,headers = header,timeout=50)
-        print(self.response.status_code)
         self.content = self.response.content.decode('utf-8')
         self.get_movie_name()
         self.get_movie_degree()
         self.get_want_watch()
         self.get_watched_num()
         self.get_short_comment_person_num()
+        self.get_long_comments_num()
+        self.get_long_comments()
         self.get_movie_type()
         self.get_play_time()
         self.get_movie_time()
         self.get_director()
-        # self.get_movie_nation()
-        # self.get_evaluate_person()
-        self.comments()
+        self.get_short_comments()
+
     #获取短评论人数
     def get_short_comment_person_num(self):
-        xpath = '//*[@id="comments-section"]/div[1]/h2/span/a/text()'
-        selector = etree.HTML(self.content)
-        content = selector.xpath(xpath)
-        self.short_comment_person_num = content[0]
-        self.all_comments.append(self.movie_name + "的短评人数:" + str(self.short_comment_person_num) + "\n")
-        print(self.movie_name + "短评数:" + str(self.short_comment_person_num))
+        r = requests.get('https://movie.douban.com/subject/{}/comments?status=P'.format(self.movie_id),
+                         headers = header,timeout = 50)
+        selector = etree.HTML(r.text)
+        content = selector.xpath('//*[@id="content"]/div/div[1]/div[1]/ul/li[1]/span/text()')[0]
+        data = re.split('\(',content)[1]
+        data = re.split('\)',content)[0]
+        data = re.split('\(',data)[1]
+        self.short_comment_num = int(data)
+        print("短评论数量为:{}".format(self.short_comment_num))
+    # 获取长评论数
+    def get_long_comments_num(self):
+        r = requests.get('https://movie.douban.com/subject/{}/reviews'.format(self.movie_id),headers = header,timeout = 50)
+        selector = etree.HTML(r.text)
+        content = selector.xpath('//*[@id="content"]/div/div[1]/div[2]/span[5]/text()')[0]
+        data = re.findall('(共(.+?)条)',content)
+        self.long_comments_num = int(data[0][1])
+        print("长评论数量为: {}".format(self.long_comments_num))
     def get_movie_type(self):
         xpath = '//*[@id="info"]/span[5]/text()'
         selector = etree.HTML(self.content)
@@ -70,18 +94,6 @@ class DoubanMovie:
         self.director = content[0]
         self.all_comments.append(self.movie_name + "的导演:" + str(self.director) + "\n")
         print(self.movie_name + "导演:" + str(self.director))
-    """
-    def get_movie_nation(self):
-        xpath = '//*[@id="info"]/br[5]/text()'
-        req = requests.get(self.movie_index, headers=header)
-        selector = etree.HTML(req.text)
-        content = selector.xpath(xpath)
-        print(content)
-        # if content[0]!='':
-        #     self.nation = content[0]
-        # self.all_comments.append(self.movie_name + "的国家为:" + str(self.nation) + "\n")
-        # print(self.movie_name + "国籍为:" + str(self.nation))
-    """
     #获取评价人数
     def get_evaluate_person(self):
         xpath = '//*[@id="content"]/div[2]/div[1]/section/header/h2/span/a/text()'
@@ -114,7 +126,8 @@ class DoubanMovie:
         self.all_comments.append(content[0]+"\n")
         self.movie_name = content[0]+" "
         print(self.movie_name)
-    #获取该电影豆瓣评分
+
+    # 获取该电影豆瓣评分
     def get_movie_degree(self):
         xpath = '//*[@id="interest_sectl"]/div[1]/div[2]/strong/text()'
         selector = etree.HTML(self.content)
@@ -148,63 +161,65 @@ class DoubanMovie:
         self.all_comments.append(content[0] + "\n")
         self.better_than = content[0] + " "
         print(self.movie_name + " 好于 " + content[0])
-    #获取所有评论
-    def comments(self):
-        page_url = self.getPageUrl()
-        count =1
-        for page in page_url:
-            self.get_page_comments(page)
-            print("正在获取第 %s 页的评论" %(int(count/20)))
-            count = count+20
-        print("获取评论成功，正在写入文件")
-        print(self.all_comments)
-        self.all_comments = set(self.all_comments)
-        self.write_comments()
-    # 生成该电影每一页的url
-    def getPageUrl(self):
-        list = []
-        for i in range(1,self.movie_page+1,20):
-            list.append("https://movie.douban.com/subject/"+str(self.movie_id)+"/comments?start="+str(i)+"&limit=20&sort=new_score&status=P")
-        return list
-    # 生成xpath，得到每一页的评论
-    def getXpath(self):
-        list = []
-        for i in range(1,21):
-            list.append('//*[@id="comments"]/div['+str(i)+']/div[2]/p/text()')
-        return list
-    # 获取每一页的评论
-    def get_page_comments(self,url):
-        xpath = self.getXpath()
-        try:
-            response = requests.get(url,headers = header,timeout=40)
-        except:
-            pass
-        text = response.content.decode('utf-8')
-        for xpaths in xpath:
-            selector = etree.HTML(text)
-            content = selector.xpath(xpaths)
-            for con in content:
-                self.all_comments.append(con)
-    def write_comments(self):
-        f = codecs.open(self.path + "douban_comments.txt", 'wb', 'utf-8')
-        f.write("")
+
+    def get_short_comments(self):
+        url = []
+        for i in range(0,self.short_comment_num+20,20):
+            url.append('https://movie.douban.com/subject/{}/comments?start={}&limit=20&sort=new_score&status=P'.format(self.movie_id,i))
+        xpath =['//*[@id="comments"]/div[{}]/div[2]/p/span/text()'.format(i) for i in range(1,21)]
+        votes_xpath = []
+        for i in range(1, 21):
+            votes_xpath.append("""//*[@id="comments"]/div[{}]/div[2]/h3/span[1]/span/text()""".format(i))
+        for u in url:
+            r = requests.get(u,headers = header,timeout = 50)
+            for x in xpath:
+                selector = etree.HTML(r.text)
+                try:
+                    self.short_comment.append(selector.xpath(x)[0])
+                except IndexError:
+                    print("short comments xpath Error")
+                    pass
+            for votes in votes_xpath:
+                selector = etree.HTML(r.text)
+                try:
+                    self.votes.append(selector.xpath(votes)[0])
+                except IndexError:
+                    print("shorts comments xpath Error")
+                    pass
+            print(u+"页获取完成")
+
+    def get_long_comments(self):
+        r = requests.get('https://movie.douban.com/subject/{}/reviews'.format(self.movie_id),headers = header,timeout = 50)
+        selector = etree.HTML(r.text)
+        total = selector.xpath('//*[@id="content"]/div/div[1]/div[2]/span[5]/text()')
+        data = re.findall('(共(.+?)条)',total[0])[0][1]
+        self.long_comments_num = int(data)
+        long_comments_url = []
+        for i in range(0,self.long_comments_num+20,20):
+            long_comments_url.append('https://movie.douban.com/subject/{}/reviews?start={}'.format(self.movie_id, i))
+        for url in long_comments_url:
+            r = requests.get(url, headers=header, timeout=50)
+            data = re.findall(re.compile(r'href="https://movie.douban.com/review/(.+?)/"'),r.text)
+            for i in data:
+                if i not in self.long_comments_id and i!='best':
+                    self.long_comments_id.append(i)
+            print(self.long_comments_id)
+
+    def save_data(self):
+        str = ''
+        for i in self.short_comment:
+            str += i
+        with open(self.path + "\\short_comments.txt", 'w', encoding='utf-8') as f:
+            f.write(str)
         f.close()
-        try:
-            f = codecs.open(self.path+"douban_comments.txt",'wb','utf-8')
-            for li in self.all_comments:
-                f.write(li)
-                f.flush()
-            f.close()
-            print("write done")
-        except:
-            print("写入评论失败")
-            raise IOError
+        self.short_comment_data = {'short_comments': self.short_comment,'votes' : self.votes }
+        frame = DataFrame(self.short_comment_data)
+        frame.to_excel(self.path + '\\'+ self.movie_name + '.xls', index=True)
 
 
 if __name__ == '__main__':
-    movie_id = "25779218"
-    movie_page = 100000
+    # url = 'https://movie.douban.com/subject_search?search_text='
+    movie_id = "25716096"
     comments_path = "D:\\"
-    douban = DoubanMovie(movie_id,movie_page,comments_path)
-    #'//*[@id="interest_sectl"]/div[1]/div[2]/strong/text()'
-    #'//*[@id="comments"]/div[1]/div[2]/p/text()'
+    douban = DoubanMovie(movie_id, comments_path)
+
