@@ -34,6 +34,7 @@ class DoubanMovie:
         self.short_comment_num = 0
         self.long_comments_num = 0
         self.long_comments_id = []
+        self.long_img_url = []
         # 长评论支持和反对的人数
         self.long_approve = []
         self.long_against = []
@@ -45,14 +46,15 @@ class DoubanMovie:
         self.get_movie_degree()
         self.get_want_watch()
         self.get_watched_num()
-        self.get_short_comment_person_num()
-        self.get_long_comments_num()
-        self.get_long_comments()
         self.get_movie_type()
         self.get_play_time()
         self.get_movie_time()
         self.get_director()
+        self.get_short_comment_person_num()
+        self.get_long_comments_num()
         self.get_short_comments()
+        self.get_long_comments()
+        self.save_data()
 
     #获取短评论人数
     def get_short_comment_person_num(self):
@@ -163,6 +165,7 @@ class DoubanMovie:
         print(self.movie_name + " 好于 " + content[0])
 
     def get_short_comments(self):
+        print("获取短评论")
         url = []
         for i in range(0,self.short_comment_num+20,20):
             url.append('https://movie.douban.com/subject/{}/comments?start={}&limit=20&sort=new_score&status=P'.format(self.movie_id,i))
@@ -189,6 +192,7 @@ class DoubanMovie:
             print(u+"页获取完成")
 
     def get_long_comments(self):
+        print("获取长评论")
         r = requests.get('https://movie.douban.com/subject/{}/reviews'.format(self.movie_id),headers = header,timeout = 50)
         selector = etree.HTML(r.text)
         total = selector.xpath('//*[@id="content"]/div/div[1]/div[2]/span[5]/text()')
@@ -203,23 +207,47 @@ class DoubanMovie:
             for i in data:
                 if i not in self.long_comments_id and i!='best':
                     self.long_comments_id.append(i)
-            print(self.long_comments_id)
+            # print(self.long_comments_id)
+        for i in self.long_comments_id:
+            r = requests.get('https://movie.douban.com/review/{}/'.format(i), headers=header, timeout=50)
+            content = re.findall(re.compile('<p>(.+?)</p>'), r.text)
+            s = ' '.join(content)
+            s = re.sub('<.+?>','',s)
+            s = re.sub('</.+?>','',s)
+            self.long_comments.append(s)
+            img = re.findall(re.compile('<img src="(.+?).jpg"'), r.text)
+            image = [i + ".jpg" for i in img]
+            self.long_img_url = [i for i in image]
+        print("长评论获取完成")
 
     def save_data(self):
+        if not os.path.exists(self.path+"\\{}".format(self.movie_name)):
+            os.mkdir(self.path+"\\{}".format(self.movie_name))
+            os.mkdir(self.path+"\\{}".format(self.movie_name)+"\\img")
         str = ''
         for i in self.short_comment:
             str += i
-        with open(self.path + "\\short_comments.txt", 'w', encoding='utf-8') as f:
+        with open(self.path+"\\{}".format(self.movie_name) + "\\short_comments.txt", 'w', encoding='utf-8') as f:
             f.write(str)
         f.close()
-        self.short_comment_data = {'short_comments': self.short_comment,'votes' : self.votes }
+        s = ' '.join(self.long_comments)
+        with open(self.path+"\\{}".format(self.movie_name) + "\\long_comments.txt", 'w', encoding='utf-8') as f:
+            f.write(s)
+        f.close()
+        self.short_comment_data = {'short_comments': self.short_comment,'short_comments_votes' : self.votes,'long_comments':self.long_comments}
         frame = DataFrame(self.short_comment_data)
-        frame.to_excel(self.path + '\\'+ self.movie_name + '.xls', index=True)
-
+        frame.to_excel(self.path+"\\{}".format(self.movie_name) + '\\' + self.movie_name + '.xls', index=True)
+        print("下载长评论文章配图,一共有 {} 张图片".format(len(self.long_img_url)))
+        count = 0
+        for url in self.long_img_url:
+            r = requests.get(url,headers=header,timeout=50)
+            with open(self.path+"\\{}".format(self.movie_name)+"\\img\\{}".format(str(count)+".jpg"),'wb') as f:
+                f.write(r.content)
+            count+=1
 
 if __name__ == '__main__':
     # url = 'https://movie.douban.com/subject_search?search_text='
     movie_id = "25716096"
-    comments_path = "D:\\"
+    comments_path = "D:"
     douban = DoubanMovie(movie_id, comments_path)
 
