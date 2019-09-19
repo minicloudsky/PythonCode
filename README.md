@@ -1,2 +1,2 @@
 # PythonCode
-my python daily study code,include django web project,spider etc.
+My python daily study code,include django web project,data visualization,algorithms,spider etc.
