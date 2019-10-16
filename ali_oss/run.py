@@ -17,7 +17,14 @@ uploadfile = bucket.put_object_from_file("07_综合案例一：手写数字识�
 base_url = 'https://plus-books.oss-cn-shenzhen.aliyuncs.com/'
 full_file = []
 for b in islice(oss2.ObjectIterator(bucket), 1000):
-    full_file.append({'filename': b.key, 'url': base_url + quote(b.key)})
+    file_name = b.key.replace(" ","").strip().split("/")
+    print(file_name)
+    if len(file_name) > 1:
+        file_name = file_name[-1]
+    else:
+        file_name = file_name[0]
+    full_file.append({'filename': file_name, 'url': base_url + quote(b.key)})
+
 file_path = 'D:\\blog-backup\\yawuplus.github.io\\blog\source\\book\\index.md'
 txt = """
 ---
