@@ -4,6 +4,7 @@ from pyecharts.charts import Page, Pie, Bar, WordCloud, Scatter, Funnel
 from pyecharts import options as opts
 from pyecharts.globals import SymbolType, ThemeType
 import random
+import os
 from pyecharts.render import make_snapshot
 # 使用 snapshot-selenium 渲染图片
 from snapshot_selenium import snapshot

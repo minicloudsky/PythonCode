@@ -28,7 +28,7 @@ for b in islice(oss2.ObjectIterator(bucket), 1000):
 file_path = 'D:\\blog-backup\\yawuplus.github.io\\blog\source\\book\\index.md'
 txt = """
 ---
-title: book
+title: 个人oss书籍和文件同步到这里
 date: {}
 categories:
 tags:
