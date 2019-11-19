@@ -17,7 +17,7 @@ uploadfile = bucket.put_object_from_file("07_综合案例一：手写数字识�
 base_url = 'https://plus-books.oss-cn-shenzhen.aliyuncs.com/'
 full_file = []
 for b in islice(oss2.ObjectIterator(bucket), 1000):
-    file_name = b.key.replace(" ","").strip().split("/")
+    file_name = b.key.strip().split("/")
     print(file_name)
     if len(file_name) > 1:
         file_name = file_name[-1]
