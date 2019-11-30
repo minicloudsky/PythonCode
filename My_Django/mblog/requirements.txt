@@ -33,7 +33,7 @@ jsonpath==0.75
 lxml==3.8.0
 MarkupSafe==1.0
 matplotlib==2.0.2
-mistune==0.7.1
+mistune==0.8.1
 nltk==3.4.5
 numpy==1.13.1
 olefile==0.44
