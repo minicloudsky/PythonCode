@@ -21,7 +21,7 @@ Markdown==2.6.10
 markdown2==2.3.5
 MarkupSafe==1.0
 mistune==0.7.1
-nltk==3.2.4
+nltk==3.4.5
 olefile==0.44
 openpyxl==2.4.8
 parsel==1.2.0
