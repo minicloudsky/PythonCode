@@ -9,7 +9,7 @@ chardet==3.0.4
 click==6.7
 cmdline==0.1.8
 constantly==15.1.0
-cryptography==2.0.3
+cryptography==2.3
 cssselect==1.0.1
 curses==2.2
 cycler==0.10.0
