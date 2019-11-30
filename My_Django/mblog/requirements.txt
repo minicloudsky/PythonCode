@@ -79,7 +79,7 @@ sip==4.19.3
 six==1.10.0
 tblib==1.3.2
 tornado==4.5.2
-Twisted==17.9.0
+Twisted==19.7.0
 u-msgpack-python==2.4.1
 urllib3==1.24.2
 w3lib==1.18.0
