@@ -71,7 +71,7 @@ pywin32==220
 PyYAML==5.1
 qrcode==5.3
 queuelib==1.4.2
-requests==2.10.0
+requests==2.20.0
 Scrapy==1.4.0
 selenium==3.6.0
 service-identity==17.0.0
