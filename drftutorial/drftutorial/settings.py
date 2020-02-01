@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'quickstart.apps.TutorialConfig',
+    'passage',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
