@@ -5,8 +5,8 @@ from selenium.common.exceptions import NoSuchElementException
 from time import sleep
 from urllib.parse import urlencode,quote
 import requests
-username = '15716302402'
-password = 'jyw83139200..'
+username = ''
+password = ''
 class Douban():
 
     def __init__(self, username, password,keyword, title, content):
