@@ -35,7 +35,11 @@ categories:
 tags:
 ---
 """.format(datetime.datetime.now())
-full_file = [i for i in set(full_file)]
+tmp_full_file = []
+for i in full_file:
+    if i not in tmp_full_file:
+        tmp_full_file.append(i)
+full_file = tmp_full_file
 for book in full_file:
     txt += "[{}]({})\r\n".format(book['filename'], book['url'])
 with codecs.open(file_path, 'w', encoding='utf-8') as f:
