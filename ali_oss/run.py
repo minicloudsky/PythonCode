@@ -26,7 +26,7 @@ for b in islice(oss2.ObjectIterator(bucket), 1000):
     if '.pdf'  in file_name:
         full_file.append({'filename': file_name.replace('@www.java1234.com','').replace('[www.javascriptcn.com]',''), 'url': base_url + quote(b.key)})
 
-file_path = '/home/jywcode/blog-backup/blog/source/book/index.md'
+file_path = '/home/.jywcode/blog-backup/blog/source/book/index.md'
 txt = """
 ---
 title: 个人oss书籍和文件同步到这里
