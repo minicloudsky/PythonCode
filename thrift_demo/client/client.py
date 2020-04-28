@@ -1,34 +1,25 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-
-import os
 import sys
-sys.path.append(os.path.abspath(os.path.join(os.path.dirname('__file__'), os.path.pardir)))
-
+import jsonfrom test import Transmit
+from test.ttypes import *
+from test.constants import *
+from thrift import Thrift
 from thrift.transport import TSocket
 from thrift.transport import TTransport
 from thrift.protocol import TBinaryProtocol
-from example.format_data import Client
-from example.format_data import Data
 
 
-__HOST = 'localhost'
-__PORT = 9000
+transport = TSocket.TSocket('127.0.0.1', 8000)
+transport = TTransport.TBufferedTransport(transport)
+protocol = TBinaryProtocol.TBinaryProtocol(transport)
+client = Transmit.Client(protocol)
+# Connect!
+transport.open()
 
+cmd = 2
+token = '1111-2222-3333-4444'
+data = json.dumps({"name":"zhoujielun"})
+msg = client.invoke(cmd,token,data)
+print(msg)
+transport.close()
 
-try:
-    tsocket = TSocket.TSocket(__HOST, __PORT)
-    transport = TTransport.TBufferedTransport(tsocket)
-    protocol = TBinaryProtocol.TBinaryProtocol(transport)
-    client = Client(protocol)
-
-    data = Data('hello,world!', 123)
-    transport.open()
-    print('client-requets')
-    res = client.do_format(data)
-    # print(client.do_format(data).text)
-    print('server-answer', res)
-
-    transport.close()
-except Thrift.TException as ex:
-    print(ex.message)
+# 执行结果：

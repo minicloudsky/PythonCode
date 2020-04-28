@@ -1,7 +1,10 @@
 import asyncio
 import aiohttp
 import time
+import json
 
+def listjson(dir):
+    files =
 
 async def request(sleep_time):
     async with aiohttp.ClientSession() as client:

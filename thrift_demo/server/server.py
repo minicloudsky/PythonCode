@@ -1,42 +1,37 @@
-#! /usr/bin/env python
-# -*- coding: utf-8 -*-
-
-import os
-import sys
-cur_path =os.path.abspath(os.path.join(os.path.dirname('__file__'), os.path.pardir))
-sys.path.append(cur_path)
-
-from example import format_data
-from example import ttypes
+import json
+from test import Transmit
+from test.ttypes import *
 from thrift.transport import TSocket
 from thrift.transport import TTransport
 from thrift.protocol import TBinaryProtocol
 from thrift.server import TServer
-
-__HOST = 'localhost'
-__PORT = 9000
+import socket
 
 
-class FormatDataHandler(object):
-    def do_format(self, data):
-        print(data.text, data.id)
-        # can do something
-        return ttypes.Data(data.text.upper(), data.id)
+class TransmitHandler:
+    def __init__(self):
+        self.log = {}
 
+    def sayMsg(self, msg):
+        msg = json.loads(msg)
+        print("sayMsg(" + msg + ")")
+        return "say " + msg + " from " + socket.gethostbyname(socket.gethostname())
 
-if __name__ == '__main__':
-    handler = FormatDataHandler()
+    def invoke(self,cmd,token,data):
+        cmd = cmd
+        token =token
+        data = data
+        if cmd ==1:
+            return json.dumps({token:data})
+        else:
+            return 'cmd不匹配'
 
-    processor = format_data.Processor(handler)
-    transport = TSocket.TServerSocket(__HOST, __PORT)
-    # 传输方式，使用buffer
+if __name__=="__main__":
+    handler = TransmitHandler()
+    processor = Transmit.Processor(handler)
+    transport = TSocket.TServerSocket('127.0.0.1', 8000)
     tfactory = TTransport.TBufferedTransportFactory()
-    # 传输的数据类型：二进制
     pfactory = TBinaryProtocol.TBinaryProtocolFactory()
-
-    # 创建一个thrift 服务
-    rpcServer = TServer.TSimpleServer(processor,transport, tfactory, pfactory)
-
-    print('Starting the rpc server at', __HOST,':', __PORT)
-    rpcServer.serve()
-    print('done')
+    server = TServer.TSimpleServer(processor, transport, tfactory, pfactory)
+    print("Starting python server...")
+    server.serve()
