@@ -5,7 +5,7 @@ from baidumapapi.config import *
 
 class BaiduMap:
     base_url = 'http://api.map.baidu.com/routematrix/v2/'
-    ak = 'mQ4gwBXA5eLrCwyAd4zhcMsdIVDWmrAW'
+    ak = 'xxx'
 
     def __init__(self, origin_longitude, origin_latitude,
                  destination_longitude, destination_latitude,
